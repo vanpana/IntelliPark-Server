@@ -10,12 +10,12 @@ public class Employee {
     private String password;
     private String car_plate;
     private Date employ_date;
-    private int multiplier;
+    private float multiplier;
     private int parking_spot;
     private boolean is_sharing;
 
     public Employee(int id, String name, String surname, String email, String password, String car_plate, Date employ_date,
-                    int multiplier, int parking_spot, boolean is_sharing) {
+                    float multiplier, int parking_spot, boolean is_sharing) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -84,11 +84,11 @@ public class Employee {
         this.employ_date = employ_date;
     }
 
-    public int getMultiplier() {
+    public float getMultiplier() {
         return multiplier;
     }
 
-    public void setMultiplier(int multiplier) {
+    public void setMultiplier(float multiplier) {
         this.multiplier = multiplier;
     }
 
