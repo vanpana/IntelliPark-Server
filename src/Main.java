@@ -28,7 +28,9 @@ public class Main {
         }
 
         Repository repo = new Repository("myparking.db");
+
         NotificationRepository notifrepo = new NotificationRepository();
+
 
         ArrayList<String> notif = new ArrayList<>();
         notif.add("requestRide");

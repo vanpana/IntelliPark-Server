@@ -34,6 +34,35 @@ public class Repository {
         else System.out.println("File does not exist");
     }
 
+    public void add(Employee e)
+    {
+//        try{
+            String query =  "INSERT INTO Employee" +
+                    String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d",
+                            e.getId(),
+                            e.getName(),
+                            e.getSurname(),
+                            e.getEmail(),
+                            e.getPassword(),
+                            e.getCar_plate(),
+                            e.getNeighbourhood(),
+                            e.getEmploy_date(),
+                            e.getMultiplier(),
+                            e.getParking_spot(),
+                            (e.isIs_sharing()) ? 1 : 0);
+            System.out.println(query);
+//            stmt.executeUpdate(sql);
+//
+//            conn.commit();
+
+//        }
+//        catch (SQLException ex){
+//            System.out.println(ex.getMessage());
+//        }
+
+
+    }
+
     private ArrayList<Employee> getEmployees(ResultSet rs){
         ArrayList<Employee> items = new ArrayList<>();
 
