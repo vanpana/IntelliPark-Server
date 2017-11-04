@@ -1,5 +1,7 @@
-class ParkingBlock {
-    enum Blocks {
+package Model;
+
+public class ParkingBlock {
+    public enum Blocks {
         STREET,
         FREEPARKING,
         OCCUPIEDPARKING
@@ -9,33 +11,33 @@ class ParkingBlock {
     private int x;
     private int y;
 
-    ParkingBlock(int x, int y) {
+    public ParkingBlock(int x, int y) {
         type = Blocks.STREET;
         this.x = x;
         this.y = y;
     }
 
-    void changeToStreet() {
+    public void changeToStreet() {
         type = Blocks.STREET;
     }
 
-    void changeToFreeParking() {
+    public void changeToFreeParking() {
         type = Blocks.FREEPARKING;
     }
 
-    void changeToOccupiedParking() {
+    public void changeToOccupiedParking() {
         type = Blocks.OCCUPIEDPARKING;
     }
 
-    int getX() {
+    public int getX() {
         return x;
     }
 
-    int getY() {
+    public int getY() {
         return y;
     }
 
-    Blocks getType() {
+    public Blocks getType() {
         return type;
     }
 }

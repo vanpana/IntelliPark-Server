@@ -21,8 +21,6 @@ public class Repository {
         this.filename = filename;
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
-            // do something
-
             try {
                 Class.forName("org.sqlite.JDBC");
                 //conn = DriverManager.getConnection("jdbc:sqlite:" + this.filename);

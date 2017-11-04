@@ -83,4 +83,8 @@ public class Controller {
 
         return sortedMap;
     }
+
+    public ArrayList<Employee> getAll(){
+        return repo.getAll();
+    }
 }

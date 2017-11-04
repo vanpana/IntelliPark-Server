@@ -1,21 +1,27 @@
+package View;
+
+import Model.ParkingBlock;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-public class MatrixGUI {
+public class Matrix {
     private static List<ParkingBlock> blocksList;
 
-    private static void createAndShowGUI() {
+    public void createAndShowGUI() {
+
+
         blocksList = new ArrayList<>();
 
         JFrame frame = new JFrame("Setup");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
-        frame.setPreferredSize(new Dimension(1920, 1080));
+        frame.setPreferredSize(new Dimension(1000, 1000));
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 
         JLabel rowLabel = new JLabel("Number of rows:");
@@ -62,7 +68,7 @@ public class MatrixGUI {
 
         JButton generateButton = new JButton("Generate");
         generateButton.addActionListener((e) -> {
-            try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data.txt"), "utf-8"))) {
+            try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("parkingmatrix.txt"), "utf-8"))) {
                 try {
                     System.out.println(blocksList.size());
                     writer.write(Integer.parseInt(rowField.getText()) + " " + Integer.parseInt(columnField.getText()) + '\n');
@@ -137,7 +143,4 @@ public class MatrixGUI {
         }
     }
 
-    public static void main(String[] args) {
-        createAndShowGUI();
-    }
 }
