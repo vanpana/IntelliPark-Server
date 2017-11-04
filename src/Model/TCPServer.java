@@ -33,32 +33,49 @@ public class TCPServer implements Runnable{
         }
     }
 
-    private void analyze(ArrayList<String> command){
-        if (command.size() == 0){
+    private void analyze(ArrayList<String> command) {
+        if (command.size() == 0) {
             System.out.println("No command provided!");
             return;
         }
 
         String action = command.get(0);
-        if (action.equals("login")){
-            if (command.size() == 3){
+        if (action.equals("login")) {
+            if (command.size() == 3) {
                 new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
-            }
-            else System.out.println("Received bad format!");
-        }
-
-        else if (action.equals("showSpot")){
+            } else System.out.println("Received bad format!");
+        } else if (action.equals("showSpot")) {
             //TODO: Check if password is correct
-            if (command.size() == 3){
+            if (command.size() == 3) {
                 new Thread(new ParkingThread(connectionSocket, command.get(1), ctrl)).start();
+            } else System.out.println("Received bad format!");
+        } else if (action.equals("requestRide")) {
+            //TODO: Check if password is correct
+            if (command.size() == 4) {
+                ArrayList<String> newcommand = new ArrayList<>();
+                newcommand.add(command.get(0));
+                newcommand.add(command.get(3));
+                newcommand.add(command.get(1));
+                ctrl.addNotification(newcommand);
             }
-            else System.out.println("Received bad format!");
+        } else if (action.equals("acceptedRide") || action.equals("rejectedRide")) {
+            if (command.size() == 4) { //requestride,email,pass,driveremail
+                ctrl.addNotification(command);
+                ArrayList<String> newcommand = new ArrayList<>();
+                newcommand.add(command.get(0));
+                newcommand.add(command.get(1));
+                newcommand.add(command.get(3));
+                ctrl.addNotification(newcommand);
+            }
+        } else if (action.equals("getNotifications")) {
+            if (command.size() == 3) {
+                new Thread(new NotificationThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
+            }
         }
 
-        else if (action.equals("requestRide") || action.equals("acceptedRide") || action.equals("rejectedRide")){
-            //TODO: Check if password is correct
-            if (command.size() == 4){ //requestride,email,pass,driveremail
-                ctrl.addNotification(command);
+        else if (action.equals("getPeopleInZone")){
+            if (command.size() == 3){
+                new Thread(new PeopleInZoneThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
             }
         }
     }

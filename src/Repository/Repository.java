@@ -75,6 +75,7 @@ public class Repository {
                 String email = rs.getString("email");
                 String password = rs.getString("password");
                 String car_plate = rs.getString("carplate");
+                String neighbourhood = rs.getString("neighbourhood");
                 String tempdate = rs.getString("date");
                 // new Date(Integer.parseInt(tempdate[2]), Integer.parseInt(tempdate[1]), Integer.parseInt(tempdate[0]));
                 DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
@@ -91,7 +92,7 @@ public class Repository {
                 boolean is_sharing = false;
                 if (tempshare == 1) is_sharing = true;
 
-                items.add(createEmployeeFromData(id, name, surname, email, password, car_plate, date, multiplier,
+                items.add(createEmployeeFromData(id, name, surname, email, password, car_plate, neighbourhood, date, multiplier,
                         parking_spot, is_sharing));
             }
         }
@@ -106,9 +107,9 @@ public class Repository {
     }
 
     private Employee createEmployeeFromData(int id, String name, String surname, String email, String password,
-                                           String car_plate, Date employ_date,  float multiplier, int parking_spot,
+                                           String car_plate, String neighbourhood, Date employ_date,  float multiplier, int parking_spot,
                                            boolean is_sharing){
-        return new Employee(id, name, surname, email, password, car_plate, employ_date, multiplier, parking_spot, is_sharing);
+        return new Employee(id, name, surname, email, password, car_plate, neighbourhood, employ_date, multiplier, parking_spot, is_sharing);
     }
 
     public ArrayList<Employee> getAll(){

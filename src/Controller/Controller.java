@@ -108,6 +108,24 @@ public class Controller {
         return sortedMap;
     }
 
+    public ArrayList<Employee> getParkingSpotsFromZone(String neighbourhood){
+        int counter = getTotalParkingSpots();
+        ArrayList<Employee> fromZone = new ArrayList<>();
+
+        for (Employee emp : getParkingSpots()){
+            System.out.println(counter);
+            System.out.println(emp.getNeighbourhood() + " vs " + neighbourhood);
+            if (counter > 1){
+                    if (emp.getNeighbourhood().equals(neighbourhood)){
+                    fromZone.add(emp);
+                    counter--;
+                }
+            }
+            else break;
+        }
+        return fromZone;
+    }
+
     public ArrayList<Employee> getAll(){
         return repo.getAll();
     }
