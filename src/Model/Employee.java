@@ -9,6 +9,7 @@ public class Employee {
     private String email;
     private String password;
     private String car_plate;
+    private String neighbourhood;
     private Date employ_date;
     private float multiplier;
     private int parking_spot;
@@ -22,10 +23,33 @@ public class Employee {
         this.email = email;
         this.password = password;
         this.car_plate = car_plate;
+        this.neighbourhood = "Centru";
         this.employ_date = employ_date;
         this.multiplier = multiplier;
         this.parking_spot = parking_spot;
         this.is_sharing = is_sharing;
+    }
+
+    public Employee(int id, String name, String surname, String email, String password, String car_plate, String neighbourhood, Date employ_date, float multiplier, int parking_spot, boolean is_sharing) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.car_plate = car_plate;
+        this.neighbourhood = neighbourhood;
+        this.employ_date = employ_date;
+        this.multiplier = multiplier;
+        this.parking_spot = parking_spot;
+        this.is_sharing = is_sharing;
+    }
+
+    public String getNeighbourhood() {
+        return neighbourhood;
+    }
+
+    public void setNeighbourhood(String neighbourhood) {
+        this.neighbourhood = neighbourhood;
     }
 
     public int getId() {

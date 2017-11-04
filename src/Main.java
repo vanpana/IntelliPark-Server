@@ -29,6 +29,7 @@ public class Main {
         }
 
         Repository repo = new Repository("myparking.db");
+        repo.add(repo.getEmployee("van.panaite@gmail.com"));
 //        Controller ctrl = new Controller(repo);
 //        for (Employee e : ctrl.getParkingSpots())
 //            System.out.println(e);
