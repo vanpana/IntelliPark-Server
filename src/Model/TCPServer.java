@@ -45,16 +45,21 @@ public class TCPServer implements Runnable{
                 new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
             }
             else System.out.println("Received bad format!");
-
-            //TODO: login thread
         }
 
-        if (action.equals("showSpot")){
+        else if (action.equals("showSpot")){
             //TODO: Check if password is correct
             if (command.size() == 3){
                 new Thread(new ParkingThread(connectionSocket, command.get(1), ctrl)).start();
             }
             else System.out.println("Received bad format!");
+        }
+
+        else if (action.equals("requestRide") || action.equals("acceptedRide") || action.equals("rejectedRide")){
+            //TODO: Check if password is correct
+            if (command.size() == 4){ //requestride,email,pass,driveremail
+                ctrl.addNotification(command);
+            }
         }
     }
 

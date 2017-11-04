@@ -116,6 +116,11 @@ public class Controller {
         return parkingspots;
     }
 
+    //=====
+    public void addNotification(ArrayList<String> notification){
+        this.notifrepo.add(notification);
+    }
+
     public ArrayList<ArrayList<String>> getNotifications(){
         return notifrepo.getAll();
     }
