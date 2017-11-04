@@ -11,11 +11,13 @@ public class Main {
 //            new Thread(new HelloThread(i)).start();
 //        }
         Repository repo = new Repository("myparking.db");
-        Controller ctrl = new Controller(repo);
-        for (Employee e : ctrl.getParkingSpots())
-            System.out.println(e);
+//        Controller ctrl = new Controller(repo);
+//        for (Employee e : ctrl.getParkingSpots())
+//            System.out.println(e);
 
-//        TCPServer server = new TCPServer(repo,1234);
-//        server.run();
+        TCPServer server = new TCPServer(repo,1234);
+        new Thread(server).start();
+        //server.run();
+        System.out.println("da");
     }
 }

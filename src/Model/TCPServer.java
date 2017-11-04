@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class TCPServer {
+public class TCPServer implements Runnable{
     private Repository repo;
     private ServerSocket sock;
     private Socket connectionSocket;
