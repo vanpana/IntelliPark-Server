@@ -2,12 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
 
-import static com.sun.java.accessibility.util.AWTEventMonitor.addMouseListener;
-
-public class Main {
+public class MatrixGUI {
     private static List<ParkingBlock> blocksList;
 
     private static void createAndShowGUI() {
@@ -60,6 +59,30 @@ public class Main {
         });
         frame.add(okButton);
         okButton.setBounds(20, 100, 100, 20);
+
+        JButton generateButton = new JButton("Generate");
+        generateButton.addActionListener((e) -> {
+            try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data.txt"), "utf-8"))) {
+                try {
+                    System.out.println(blocksList.size());
+                    writer.write(Integer.parseInt(rowField.getText()) + " " + Integer.parseInt(columnField.getText()) + '\n');
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                for (ParkingBlock block : blocksList) {
+                    try {
+                        writer.write(block.getX() + " " + block.getY() + " " + block.getType() + '\n');
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                writer.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
+        frame.add(generateButton);
+        generateButton.setBounds(20, 130, 100, 20);
 
         frame.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent me) {
