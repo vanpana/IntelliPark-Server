@@ -35,17 +35,11 @@ public class LoginThread implements Runnable {
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);
+            //objectOutput.close();
 
             if (result.get(0).equals("true"))
             {
-                System.out.println("Sending notifications");
-                ArrayList<ArrayList<String>> notifications = ctrl.getNotifications(input_email);
-                objectOutput.writeInt(notifications.size());
-
-                for (ArrayList<String> al : notifications){
-                    System.out.println(al);
-                    objectOutput.writeObject(al);
-                }
+                new Thread(new NotificationThread(connectionSocket, objectOutput, input_email, input_password, ctrl)).start();
             }
         }
         catch (IOException e){
