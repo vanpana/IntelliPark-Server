@@ -1,5 +1,9 @@
+import Controller.Controller;
+import Model.Employee;
 import Model.TCPServer;
 import Repository.Repository;
+
+import java.sql.Connection;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,8 +11,11 @@ public class Main {
 //            new Thread(new HelloThread(i)).start();
 //        }
         Repository repo = new Repository("myparking.db");
+        Controller ctrl = new Controller(repo);
+        for (Employee e : ctrl.getParkingSpots())
+            System.out.println(e);
 
-        TCPServer server = new TCPServer(repo,1234);
-        server.run();
+//        TCPServer server = new TCPServer(repo,1234);
+//        server.run();
     }
 }

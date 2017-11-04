@@ -41,8 +41,7 @@ public class TCPServer {
         String action = command.get(0);
         if (action.equals("login")){
             if (command.size() == 3){
-                Employee found = repo.getEmployee(command.get(1));
-                if (found != null) new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), found)).run();
+                new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), repo)).run();
             }
             else System.out.println("Received bad format!");
 
