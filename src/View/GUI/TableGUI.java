@@ -73,6 +73,13 @@ public class TableGUI {
         });
         frame.add(startConnectionButton);
 
+        JButton stopConnectionButton = new JButton("Stop connection");
+        startConnectionButton.setBounds(1060, 760, 160, 20);
+        startConnectionButton.addActionListener((e) -> {
+            //do something
+        });
+        frame.add(startConnectionButton);
+
         JLabel multiplierLabel = new JLabel("Multiplier:");
         frame.add(multiplierLabel);
         multiplierLabel.setBounds(740, 800, 60, 20);

@@ -28,6 +28,7 @@ public class Main {
         }
 
         Repository repo = new Repository("myparking.db");
+        repo.add(repo.getEmployee("van.panaite@gmail.com"));
 
         NotificationRepository notifrepo = new NotificationRepository();
 

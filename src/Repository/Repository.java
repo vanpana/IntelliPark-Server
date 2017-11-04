@@ -36,8 +36,10 @@ public class Repository {
 
     public void add(Employee e)
     {
+        DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+
 //        try{
-            String query =  "INSERT INTO Employee" +
+            String query =  "INSERT INTO Employee " +
                     String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d",
                             e.getId(),
                             e.getName(),
@@ -46,7 +48,7 @@ public class Repository {
                             e.getPassword(),
                             e.getCar_plate(),
                             e.getNeighbourhood(),
-                            e.getEmploy_date(),
+                            format.format(e.getEmploy_date()),
                             e.getMultiplier(),
                             e.getParking_spot(),
                             (e.isIs_sharing()) ? 1 : 0);
