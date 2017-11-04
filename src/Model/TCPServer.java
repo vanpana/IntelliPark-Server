@@ -1,5 +1,6 @@
 package Model;
 
+import Controller.Controller;
 import Repository.Repository;
 
 import java.io.*;
@@ -9,12 +10,12 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class TCPServer implements Runnable{
-    private Repository repo;
+    private Controller ctrl;
     private ServerSocket sock;
     private Socket connectionSocket;
 
-    public TCPServer(Repository repo, int port) {
-        this.repo = repo;
+    public TCPServer(Controller ctrl, int port) {
+        this.ctrl = ctrl;
         try {
             this.sock = new ServerSocket(port);
         }
@@ -41,16 +42,25 @@ public class TCPServer implements Runnable{
         String action = command.get(0);
         if (action.equals("login")){
             if (command.size() == 3){
-                new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), repo)).run();
+                new Thread(new LoginThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
             }
             else System.out.println("Received bad format!");
-
-            //TODO: login thread
         }
 
-//        if (action.equals("showSpot")){
-//            //TODO: Spot thread
-//        }
+        else if (action.equals("showSpot")){
+            //TODO: Check if password is correct
+            if (command.size() == 3){
+                new Thread(new ParkingThread(connectionSocket, command.get(1), ctrl)).start();
+            }
+            else System.out.println("Received bad format!");
+        }
+
+        else if (action.equals("requestRide") || action.equals("acceptedRide") || action.equals("rejectedRide")){
+            //TODO: Check if password is correct
+            if (command.size() == 4){ //requestride,email,pass,driveremail
+                ctrl.addNotification(command);
+            }
+        }
     }
 
     public void run(){
@@ -90,4 +100,5 @@ public class TCPServer implements Runnable{
 
         }
     }
+
 }

@@ -1,23 +1,20 @@
 package Model;
 
 import Controller.Controller;
-import Repository.Repository;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class LoginThread implements Runnable {
+public class ParkingThread implements Runnable {
     private Socket connectionSocket;
     private String input_email;
-    private String input_password;
     private Controller ctrl;
 
-    public LoginThread(Socket cs, String input_email, String input_password, Controller ctrl) {
-        this.connectionSocket = cs;
+    public ParkingThread(Socket connectionSocket, String input_email, Controller ctrl) {
+        this.connectionSocket = connectionSocket;
         this.input_email = input_email;
-        this.input_password = input_password;
         this.ctrl = ctrl;
     }
 
@@ -25,22 +22,22 @@ public class LoginThread implements Runnable {
     public void run() {
         ArrayList<String> result = new ArrayList<>();
         Employee found = ctrl.getEmployee(input_email);
+        ArrayList<Employee> sorted = ctrl.getParkingSpots();
 
         try {
-            if (found == null) result.add("false");
+            if (found == null) result.add("0");
             else{
-                if (found.getPassword().equals(input_password)) result.add("true");
-                else result.add("false");
+                int counter = 0;
+                for (Employee e : sorted) {
+                    if (e.getId() == found.getId()) break;
+                    counter++;
+                }
+                if (counter <= ctrl.getTotalParkingSpots()) result.add(String.valueOf(counter + 1));
+                else result.add(String.valueOf(0));
             }
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);
-            //objectOutput.close();
-
-            if (result.get(0).equals("true"))
-            {
-                new Thread(new NotificationThread(connectionSocket, objectOutput, input_email, input_password, ctrl)).start();
-            }
         }
         catch (IOException e){
             System.out.println(e.getMessage());
@@ -48,3 +45,4 @@ public class LoginThread implements Runnable {
 
     }
 }
+

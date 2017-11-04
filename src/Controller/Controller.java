@@ -1,9 +1,13 @@
 package Controller;
 
 import Model.Employee;
-import Repository.Repository;
+import Repository.*;
 import static java.lang.Math.toIntExact;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,9 +16,29 @@ import java.util.concurrent.TimeUnit;
 
 public class Controller {
     private Repository repo;
+    private NotificationRepository notifrepo;
+    private int parkingspots;
 
-    public Controller(Repository repo) {
+    public Controller(Repository repo, NotificationRepository notifrepo){
         this.repo = repo;
+        this.notifrepo = notifrepo;
+        this.parkingspots = countSpots("parkingmatrix.txt");
+    }
+
+    private int countSpots(String filename){
+        int spots = 0;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] linesplit = line.split(" ");
+                if (linesplit.length == 3 && linesplit[2].equals("FREEPARKING")) spots++;
+            }
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+        return spots;
     }
 
     public Employee getEmployee(String email){
@@ -86,5 +110,28 @@ public class Controller {
 
     public ArrayList<Employee> getAll(){
         return repo.getAll();
+    }
+
+    public int getTotalParkingSpots() {
+        return parkingspots;
+    }
+
+    //=====
+    public void addNotification(ArrayList<String> notification){
+        this.notifrepo.add(notification);
+    }
+
+    public ArrayList<ArrayList<String>> getNotifications(){
+        return notifrepo.getAll();
+    }
+
+    public ArrayList<ArrayList<String>> getNotifications(String email){
+        ArrayList<ArrayList<String>> notifications = new ArrayList<>();
+
+        for(ArrayList<String> al : getNotifications()){
+            if (al.get(1).equals(email)) notifications.add(al);
+        }
+
+        return notifications;
     }
 }
