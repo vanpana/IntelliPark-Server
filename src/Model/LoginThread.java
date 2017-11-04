@@ -1,5 +1,6 @@
 package Model;
 
+import Controller.Controller;
 import Repository.Repository;
 
 import java.io.IOException;
@@ -11,20 +12,19 @@ public class LoginThread implements Runnable {
     private Socket connectionSocket;
     private String input_email;
     private String input_password;
-    private Employee found;
-    private Repository repo;
+    private Controller ctrl;
 
-    public LoginThread(Socket cs, String input_email, String input_password, Repository repo) {
+    public LoginThread(Socket cs, String input_email, String input_password, Controller ctrl) {
         this.connectionSocket = cs;
         this.input_email = input_email;
         this.input_password = input_password;
-        this.repo = repo;
+        this.ctrl = ctrl;
     }
 
     @Override
     public void run() {
         ArrayList<String> result = new ArrayList<>();
-        Employee found = repo.getEmployee(input_email);
+        Employee found = ctrl.getEmployee(input_email);
 
         try {
             if (found == null) result.add("false");
@@ -35,6 +35,18 @@ public class LoginThread implements Runnable {
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);
+
+            if (result.get(0).equals("true"))
+            {
+                System.out.println("Sending notifications");
+                ArrayList<ArrayList<String>> notifications = ctrl.getNotifications(input_email);
+                objectOutput.writeInt(notifications.size());
+
+                for (ArrayList<String> al : notifications){
+                    System.out.println(al);
+                    objectOutput.writeObject(al);
+                }
+            }
         }
         catch (IOException e){
             System.out.println(e.getMessage());

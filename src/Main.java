@@ -1,19 +1,17 @@
 import Controller.Controller;
 import Model.Employee;
 import Model.TCPServer;
-import Repository.Repository;
+import Repository.*;
 import View.Matrix;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import static java.lang.Thread.sleep;
 
 
 public class Main {
-    public static boolean file_exists = false;
-
     public static void main(String[] args) {
-
         File f = new File("parkingmatrix.txt");
 
         if (!f.exists()){
@@ -21,7 +19,8 @@ public class Main {
             mtx.createAndShowGUI();
             while(!f.exists()){
                 try{
-                    sleep(1);}
+                    sleep(1);
+                }
                 catch (InterruptedException e){
                     System.out.println(e.getMessage());
                 }
@@ -29,19 +28,23 @@ public class Main {
         }
 
         Repository repo = new Repository("myparking.db");
-//        Controller ctrl = new Controller(repo);
-//        for (Employee e : ctrl.getParkingSpots())
-//            System.out.println(e);
+        NotificationRepository notifrepo = new NotificationRepository();
 
-        TCPServer server = new TCPServer(repo,1234);
+        ArrayList<String> notif = new ArrayList<>();
+        notif.add("requestRide");
+        notif.add("van.panaite@gmail.com");
+        notif.add("user@example.com");
+        notifrepo.add(notif);
+
+        notif = new ArrayList<>();
+        notif.add("requestRide");
+        notif.add("van.panaite@gmail.com");
+        notif.add("user@example.com");
+        notifrepo.add(notif);
+
+        Controller ctrl = new Controller(repo, notifrepo);
+
+        TCPServer server = new TCPServer(ctrl,1234);
         new Thread(server).start();
-
-
-//        for (int i = 0; i < 10; i++){
-//            new Thread(new HelloThread(i)).start();
-//        }
-
-        //server.run();
-
     }
 }
