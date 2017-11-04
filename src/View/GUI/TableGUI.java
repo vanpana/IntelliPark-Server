@@ -1,5 +1,11 @@
 package View.GUI;
 
+import Controller.*;
+import Model.Employee;
+import View.MaterialUI.GUITheme;
+import View.MaterialUI.MaterialButton;
+import View.MaterialUI.MaterialLookAndFeel;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -10,12 +16,22 @@ public class TableGUI {
     private JTable table;
     private DefaultTableModel model;
     private List<String> listOfPeople = new ArrayList<>();
+    private Controller ctrl;
 
-    private TableGUI() {
-        listOfPeople.add("Eric Roca");
-        listOfPeople.add("Norbert Herciu");
-        listOfPeople.add("Dorinel Panaite");
-        listOfPeople.add("Catalin Podariu");
+    public TableGUI(Controller ctrl) {
+        MaterialLookAndFeel ui = new MaterialLookAndFeel (GUITheme.LIGHT_THEME);
+        try {
+            UIManager.setLookAndFeel (ui.getName());
+        }
+        catch (UnsupportedLookAndFeelException|ClassNotFoundException|InstantiationException|IllegalAccessException e) {
+            System.out.println(e.getMessage());
+        }
+
+        this.ctrl = ctrl;
+//        listOfPeople.add("Eric Roca");
+//        listOfPeople.add("Norbert Herciu");
+//        listOfPeople.add("Dorinel Panaite");
+//        listOfPeople.add("Catalin Podariu");
 
         JFrame frame = new JFrame("Table");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +52,7 @@ public class TableGUI {
         pane.setVisible(true);
         frame.add(pane);
 
-        JButton addPersonButton = new JButton("Add person");
+        JButton addPersonButton = new MaterialButton("Add person");
         addPersonButton.addActionListener((e) -> {
             new AddGUI();
             displayTable();
@@ -44,7 +60,7 @@ public class TableGUI {
         frame.add(addPersonButton);
         addPersonButton.setBounds(740, 720, 120, 20);
 
-        JButton editPersonButton = new JButton("Edit person");
+        JButton editPersonButton = new MaterialButton("Edit person");
         editPersonButton.addActionListener((e) -> {
             new EditGUI();
             displayTable();
@@ -52,28 +68,29 @@ public class TableGUI {
         frame.add(editPersonButton);
         editPersonButton.setBounds(900, 720, 120, 20);
 
-        JButton deletePersonButton = new JButton("Delete person");
+        JButton deletePersonButton = new MaterialButton("Delete person");
         deletePersonButton.addActionListener((e) -> {
             //do something
         });
         frame.add(deletePersonButton);
         deletePersonButton.setBounds(1060, 720, 120, 20);
 
-        JButton addVacationButton = new JButton("Add vacation");
+        JButton addVacationButton = new MaterialButton("Add vacation");
         addVacationButton.addActionListener((e) -> {
             new VacationGUI();
         });
         frame.add(addVacationButton);
         addVacationButton.setBounds(740, 760, 120, 20);
 
-        JButton startConnectionButton = new JButton("Start connection");
+        JButton startConnectionButton = new MaterialButton("Start connection");
         startConnectionButton.setBounds(1060, 760, 160, 20);
         startConnectionButton.addActionListener((e) -> {
             //do something
         });
         frame.add(startConnectionButton);
 
-        JButton stopConnectionButton = new JButton("Stop connection");
+        JButton stopConnectionButton = new MaterialButton("Stop connection");
+        stopConnectionButton.setVisible(false);
         startConnectionButton.setBounds(1060, 760, 160, 20);
         startConnectionButton.addActionListener((e) -> {
             //do something
@@ -95,17 +112,17 @@ public class TableGUI {
     }
 
     private void displayTable() {
-        String[] column = {"Name"};
+        String[] column = {"Name","Surname","E-Mail"};
         model = new DefaultTableModel(column, 0);
         table.setModel(model);
 
-        for (String person : listOfPeople) {
-            Object[] row = {person};
+        for (Employee emp : ctrl.getAll()) {
+            Object[] row = {emp.getName(), emp.getSurname(), emp.getEmail()};
             model.addRow(row);
         }
     }
 
-    public static void main(String[] args) {
-        new TableGUI();
-    }
+//    public static void main(String[] args) {
+//        new TableGUI();
+//    }
 }

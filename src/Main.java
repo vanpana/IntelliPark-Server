@@ -2,6 +2,7 @@ import Controller.Controller;
 import Model.Employee;
 import Model.TCPServer;
 import Repository.*;
+import View.GUI.TableGUI;
 import View.Matrix;
 
 import java.io.File;
@@ -27,6 +28,7 @@ public class Main {
             }
         }
 
+
         Repository repo = new Repository("myparking.db");
         repo.add(repo.getEmployee("van.panaite@gmail.com"));
 
@@ -46,6 +48,8 @@ public class Main {
         notifrepo.add(notif);
 
         Controller ctrl = new Controller(repo, notifrepo);
+
+        TableGUI gui = new TableGUI(ctrl);
 
         TCPServer server = new TCPServer(ctrl,1234);
         new Thread(server).start();
