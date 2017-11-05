@@ -1,5 +1,7 @@
 package View.GUI;
 
+import View.MaterialUI.MaterialButton;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -24,7 +26,7 @@ public class VacationGUI {
         vacationStartTextField.setBounds(140, 60, 80, 20);
         vacationEndTextField.setBounds(140, 20, 80, 20);
 
-        JButton okButton = new JButton("Ok");
+        JButton okButton = new MaterialButton("Ok");
         okButton.addActionListener((e) -> {
             // do something
             frame.dispose();

@@ -1,10 +1,15 @@
 package View.GUI;
 
+import View.MaterialUI.GUITheme;
+import View.MaterialUI.MaterialButton;
+import View.MaterialUI.MaterialLookAndFeel;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class AddGUI {
     AddGUI() {
+        MaterialLookAndFeel ui = new MaterialLookAndFeel (GUITheme.LIGHT_THEME);
         JFrame frame = new JFrame("Add person");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
@@ -72,7 +77,7 @@ public class AddGUI {
         parkingSpotTextField.setBounds(120, 340, 100, 20);
         isSharingTextField.setBounds(120, 380, 100, 20);
 
-        JButton okButton = new JButton("Ok");
+        JButton okButton = new MaterialButton("Ok");
         okButton.addActionListener((e) -> {
             // do something
             frame.dispose();

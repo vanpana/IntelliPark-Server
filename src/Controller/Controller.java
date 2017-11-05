@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Employee;
+import Model.Notification;
+import Model.Vacation;
 import Repository.*;
 import static java.lang.Math.toIntExact;
 
@@ -17,11 +19,13 @@ import java.util.concurrent.TimeUnit;
 public class Controller {
     private Repository repo;
     private NotificationRepository notifrepo;
+    private VacationRepository vacrepo;
     private int parkingspots;
 
-    public Controller(Repository repo, NotificationRepository notifrepo){
+    public Controller(Repository repo, NotificationRepository notifrepo, VacationRepository vacrepo){
         this.repo = repo;
         this.notifrepo = notifrepo;
+        this.vacrepo = vacrepo;
         this.parkingspots = countSpots("parkingmatrix.txt");
     }
 
@@ -135,19 +139,26 @@ public class Controller {
     }
 
     //=====
-    public void addNotification(ArrayList<String> notification){
+    public void addNotification(ArrayList<String> params){
+        this.notifrepo.add(params);
+    }
+
+    public void addNotification(String notification, String toWho, String fromWhom){
+        this.notifrepo.add(notification, toWho, fromWhom);
+    }
+
+    public void addNotification(Notification notification){
         this.notifrepo.add(notification);
     }
 
-    public ArrayList<ArrayList<String>> getNotifications(){
-        return notifrepo.getAll();
-    }
 
     public ArrayList<ArrayList<String>> getNotifications(String email){
+        ArrayList<ArrayList<String>> items = notifrepo.getAll();
+
         ArrayList<ArrayList<String>> notifications = new ArrayList<>();
 
-        for(ArrayList<String> al : getNotifications()){
-            if (al.get(1).equals(email)) notifications.add(al);
+        for(ArrayList<String> al : notifrepo.getAll()){
+            if (notifrepo.getNotification(Integer.parseInt(al.get(1))).getToWho().equals(email)) notifications.add(al);
         }
 
         return notifications;

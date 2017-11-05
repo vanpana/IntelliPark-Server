@@ -38,7 +38,7 @@ public class Repository {
     {
         DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
-//        try{
+        try{
             String query =  "INSERT INTO Employee " +
                     String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d",
                             e.getId(),
@@ -52,15 +52,14 @@ public class Repository {
                             e.getMultiplier(),
                             e.getParking_spot(),
                             (e.isIs_sharing()) ? 1 : 0);
-            System.out.println(query);
-//            stmt.executeUpdate(sql);
-//
-//            conn.commit();
+            stmt.executeUpdate(query);
 
-//        }
-//        catch (SQLException ex){
-//            System.out.println(ex.getMessage());
-//        }
+            conn.commit();
+
+        }
+        catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
 
 
     }
@@ -104,6 +103,7 @@ public class Repository {
 
         return items;
     }
+
     private Employee getEmployee(ResultSet rs){
         return getEmployees(rs).get(0);
     }

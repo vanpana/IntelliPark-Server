@@ -33,8 +33,10 @@ public class LoginThread implements Runnable {
                 else result.add("false");
             }
 
+
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);
+            System.out.println(objectOutput.toString());
             //objectOutput.close();
 
             if (result.get(0).equals("true"))

@@ -3,14 +3,24 @@ package Model;
 import java.util.Date;
 
 public class Vacation {
+    int id;
     private Date start_date;
     private Date end_date;
     private int employee_id;
 
-    public Vacation(Date start_date, Date end_date, int employee_id) {
+    public Vacation(int id, Date start_date, Date end_date, int employee_id) {
+        this.id = id;
         this.start_date = start_date;
         this.end_date = end_date;
         this.employee_id = employee_id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getStart_date() {

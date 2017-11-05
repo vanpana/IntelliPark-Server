@@ -24,15 +24,6 @@ public class TCPServer implements Runnable{
         }
     }
 
-    public TCPServer(int port){
-        try {
-            this.sock = new ServerSocket(port);
-        }
-        catch (IOException e){
-            System.out.println("Can't create socket on specified port!");
-        }
-    }
-
     private void analyze(ArrayList<String> command) {
         if (command.size() == 0) {
             System.out.println("No command provided!");
@@ -86,36 +77,27 @@ public class TCPServer implements Runnable{
                 connectionSocket = sock.accept();
                 System.out.println("Client connected!");
                 ObjectInputStream objectInput = new ObjectInputStream(connectionSocket.getInputStream());
-                ArrayList<String> message = new ArrayList<>();
+                ArrayList<String> message;
 
                 try {
                     Object object = objectInput.readObject();
                     message =  (ArrayList<String>) object;
                     System.out.println(message);
                     analyze(message);
-
-
-//                    ArrayList<String> modifiedMessage = new ArrayList<>();
-//                    for (String msg : message){
-//                        modifiedMessage.add(msg.toUpperCase());
-//                    }
-//
-//                    ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
-//                    objectOutput.writeObject(modifiedMessage);
-
                 } catch (ClassNotFoundException e) {
                     System.out.println("The list has not come from the client");
                     e.printStackTrace();
                 }
+
             }
             catch (IOException e){
                 System.out.println(e.getMessage());
             }
 
-
-
-
         }
     }
 
+    public void close(){
+
+    }
 }

@@ -32,7 +32,6 @@ public class NotificationThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Sending notifications");
         ArrayList<ArrayList<String>> notifications = ctrl.getNotifications(input_email);
 
         try{

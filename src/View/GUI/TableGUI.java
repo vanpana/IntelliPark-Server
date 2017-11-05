@@ -2,9 +2,11 @@ package View.GUI;
 
 import Controller.*;
 import Model.Employee;
+import Model.TCPServer;
 import View.MaterialUI.GUITheme;
 import View.MaterialUI.MaterialButton;
 import View.MaterialUI.MaterialLookAndFeel;
+import javafx.animation.Animation;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -17,6 +19,7 @@ public class TableGUI {
     private DefaultTableModel model;
     private List<String> listOfPeople = new ArrayList<>();
     private Controller ctrl;
+    TCPServer server;
 
     public TableGUI(Controller ctrl) {
         MaterialLookAndFeel ui = new MaterialLookAndFeel (GUITheme.LIGHT_THEME);
@@ -83,19 +86,36 @@ public class TableGUI {
         addVacationButton.setBounds(740, 760, 120, 20);
 
         JButton startConnectionButton = new MaterialButton("Start connection");
+        JButton stopConnectionButton = new MaterialButton("Stop connection");
+        stopConnectionButton.setVisible(false);
+        stopConnectionButton.setEnabled(false);
+
         startConnectionButton.setBounds(1060, 760, 160, 20);
+        stopConnectionButton.setBounds(1060, 800, 160, 20);
         startConnectionButton.addActionListener((e) -> {
-            //do something
+            System.out.println("Starting server...");
+            server = new TCPServer(ctrl,1234);
+            new Thread(server).start();
+
+            startConnectionButton.setVisible(false);
+            startConnectionButton.setEnabled(false);
+
+            stopConnectionButton.setVisible(true);
+            stopConnectionButton.setEnabled(true);
         });
         frame.add(startConnectionButton);
 
-        JButton stopConnectionButton = new MaterialButton("Stop connection");
-        stopConnectionButton.setVisible(false);
-        startConnectionButton.setBounds(1060, 760, 160, 20);
-        startConnectionButton.addActionListener((e) -> {
-            //do something
+
+        stopConnectionButton.addActionListener((e) -> {
+            System.out.println("Stopping server...");
+            server.close();
+            startConnectionButton.setVisible(true);
+            startConnectionButton.setEnabled(true);
+
+            stopConnectionButton.setVisible(false);
+            stopConnectionButton.setEnabled(false);
         });
-        frame.add(startConnectionButton);
+        frame.add(stopConnectionButton);
 
         JLabel multiplierLabel = new JLabel("Multiplier:");
         frame.add(multiplierLabel);

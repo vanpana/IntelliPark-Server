@@ -32,26 +32,13 @@ public class Main {
         Repository repo = new Repository("myparking.db");
         repo.add(repo.getEmployee("van.panaite@gmail.com"));
 
-        NotificationRepository notifrepo = new NotificationRepository();
+        NotificationRepository notifrepo = new NotificationRepository("myparking.db");
+        VacationRepository vacrepo = new VacationRepository("myparking.db");
 
 
-        ArrayList<String> notif = new ArrayList<>();
-        notif.add("requestRide");
-        notif.add("van.panaite@gmail.com");
-        notif.add("user@example.com");
-        notifrepo.add(notif);
 
-        notif = new ArrayList<>();
-        notif.add("requestRide");
-        notif.add("van.panaite@gmail.com");
-        notif.add("user@example.com");
-        notifrepo.add(notif);
-
-        Controller ctrl = new Controller(repo, notifrepo);
+        Controller ctrl = new Controller(repo, notifrepo, vacrepo);
 
         TableGUI gui = new TableGUI(ctrl);
-
-        TCPServer server = new TCPServer(ctrl,1234);
-        new Thread(server).start();
     }
 }
