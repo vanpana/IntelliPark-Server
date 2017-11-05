@@ -45,6 +45,11 @@ public class Controller {
         return spots;
     }
 
+    public void addEmployee(int id, String name, String surname, String email, String password, String car_plate, Date employ_date,
+                            float multiplier, int parking_spot, boolean is_sharing){
+        repo.add(new Employee(id, name, surname, email, password, car_plate, employ_date, multiplier, parking_spot, is_sharing));
+    }
+
     public Employee getEmployee(String email){
         return repo.getEmployee(email);
     }
@@ -149,6 +154,14 @@ public class Controller {
 
     public void addNotification(Notification notification){
         this.notifrepo.add(notification);
+    }
+
+    public void delNotification(int id){
+        this.notifrepo.del(id);
+    }
+
+    public Notification getNotification(int id){
+        return this.notifrepo.getNotification(id);
     }
 
 

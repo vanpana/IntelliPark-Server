@@ -57,7 +57,7 @@ public class TableGUI {
 
         JButton addPersonButton = new MaterialButton("Add person");
         addPersonButton.addActionListener((e) -> {
-            new AddGUI();
+            new AddGUI(ctrl, this);
             displayTable();
         });
         frame.add(addPersonButton);
@@ -131,7 +131,7 @@ public class TableGUI {
         frame.setVisible(true);
     }
 
-    private void displayTable() {
+    public void displayTable() {
         String[] column = {"Name","Surname","E-Mail"};
         model = new DefaultTableModel(column, 0);
         table.setModel(model);

@@ -49,14 +49,15 @@ public class TCPServer implements Runnable{
                 newcommand.add(command.get(1));
                 ctrl.addNotification(newcommand);
             }
-        } else if (action.equals("acceptedRide") || action.equals("rejectedRide")) {
-            if (command.size() == 4) { //requestride,email,pass,driveremail
-                ctrl.addNotification(command);
+        } else if (action.equals("acceptRide") || action.equals("rejectRide")) {
+            if (command.size() == 2) {
+                //ctrl.addNotification(command);
                 ArrayList<String> newcommand = new ArrayList<>();
                 newcommand.add(command.get(0));
-                newcommand.add(command.get(1));
-                newcommand.add(command.get(3));
+                newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom());
+                newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho());
                 ctrl.addNotification(newcommand);
+
             }
         } else if (action.equals("getNotifications")) {
             if (command.size() == 3) {
@@ -67,6 +68,12 @@ public class TCPServer implements Runnable{
         else if (action.equals("getPeopleInZone")){
             if (command.size() == 3){
                 new Thread(new PeopleInZoneThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
+            }
+        }
+
+        else if (action.equals("seen")){
+            if (command.size() == 2){
+                ctrl.delNotification(Integer.parseInt(command.get(1)));
             }
         }
     }

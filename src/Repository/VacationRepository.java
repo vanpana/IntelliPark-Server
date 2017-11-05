@@ -15,8 +15,7 @@ public class VacationRepository {
     private Connection conn = null;
     private Statement stmt = null;
 
-    public VacationRepository(String filename) {
-        this.filename = filename;
+    private void connectDB(){
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             try {
@@ -33,12 +32,30 @@ public class VacationRepository {
         else System.out.println("File does not exist");
     }
 
+    private void disconnectDB(){
+        try{
+            if (!conn.isClosed()) {
+                conn.commit();
+                conn.close();
+            }
+        }
+        catch (SQLException e){
+            System.out.println("Error closing Vacation connection");
+        }
+    }
+
+    public VacationRepository(String filename) {
+        this.filename = filename;
+    }
+
     public void add(Vacation v){
         DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
         try{
+            connectDB();
+
             String query =  "INSERT INTO Vacation " +
-                    String.format("VALUES (%d, \'%s\',\'%s\',%d",
+                    String.format("VALUES (%d, \'%s\',\'%s\',%d)",
                             v.getId(),
                             format.format(v.getStart_date()),
                             format.format(v.getEnd_date()),
@@ -46,7 +63,7 @@ public class VacationRepository {
 
             stmt.executeUpdate(query);
 
-            conn.commit();
+            disconnectDB();
 
         }
         catch (SQLException ex){

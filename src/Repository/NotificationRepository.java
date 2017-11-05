@@ -24,8 +24,7 @@ public class NotificationRepository {
     private Connection conn = null;
     private Statement stmt = null;
 
-    public NotificationRepository(String filename) {
-        this.filename = filename;
+    private void connectDB(){
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             try {
@@ -40,6 +39,23 @@ public class NotificationRepository {
             }
         }
         else System.out.println("File does not exist");
+    }
+
+    private void disconnectDB(){
+        try{
+            if (!conn.isClosed()) {
+                conn.commit();
+                conn.close();
+            }
+        }
+        catch (SQLException e){
+            System.out.println("Error closing Notification connection");
+        }
+    }
+
+    public NotificationRepository(String filename) {
+        this.filename = filename;
+
     }
 
     public boolean idExists(int id){
@@ -60,16 +76,36 @@ public class NotificationRepository {
 
     public void add(Notification n){
         try{
+            connectDB();
+
             String query =  "INSERT INTO Notification " +
-                    String.format("VALUES (%d, \'%s\',\'%s\',\'%s\'",
+                    String.format("VALUES (%d, \'%s\',\'%s\',\'%s\')",
                             n.getId(),
                             n.getNotification(),
                             n.getToWho(),
                             n.getFromWhom());
 
+            System.out.println(query);
             stmt.executeUpdate(query);
 
-            conn.commit();
+            disconnectDB();
+
+        }
+        catch (SQLException ex){
+            System.out.print("Notification SQL: ");
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public void del(int id){
+        try{
+            connectDB();
+            String query =  "DELETE FROM Notification WHERE id = " +
+                    String.valueOf(id);
+
+            stmt.executeUpdate(query);
+
+            disconnectDB();
 
         }
         catch (SQLException ex){
@@ -113,11 +149,14 @@ public class NotificationRepository {
     public ArrayList<Notification> getAllNotifications(){
         ArrayList<Notification> items = new ArrayList<>();
         try{
+            connectDB();
+
             String query = "SELECT * FROM Notification";
             ResultSet rs = stmt.executeQuery(query);
             items = getNotifications(rs);
 
             rs.close();
+            disconnectDB();
         }
         catch (SQLException exc){
             System.out.println(exc.getMessage());
@@ -129,6 +168,8 @@ public class NotificationRepository {
         ArrayList<Notification> items = new ArrayList<>();
         ArrayList<ArrayList<String>> notifications = new ArrayList<>();
         try{
+            connectDB();
+
             String query = "SELECT * FROM Notification";
             ResultSet rs = stmt.executeQuery(query);
             items = getNotifications(rs);
@@ -144,6 +185,8 @@ public class NotificationRepository {
                 notifications.add(temp);
             }
             rs.close();
+
+            disconnectDB();
         }
         catch (SQLException exc){
             System.out.println(exc.getMessage());

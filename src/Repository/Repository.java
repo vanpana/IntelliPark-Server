@@ -17,8 +17,7 @@ public class Repository {
     private Connection conn = null;
     private Statement stmt = null;
 
-    public Repository(String filename) {
-        this.filename = filename;
+    private void connectDB(){
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             try {
@@ -27,11 +26,28 @@ public class Repository {
                 conn = DriverManager.getConnection("jdbc:sqlite:/Users/vanpana/Documents/IntelliJ/IntelliPark-Server/myparking.db");
                 conn.setAutoCommit(false);
                 stmt = conn.createStatement();
-            } catch (SQLException|ClassNotFoundException e) {
+            } catch (SQLException |ClassNotFoundException e) {
+                System.out.print("Vacation SQL: ");
                 System.out.println(e.getMessage());
             }
         }
         else System.out.println("File does not exist");
+    }
+
+    private void disconnectDB(){
+        try{
+            if (!conn.isClosed()) {
+                conn.commit();
+                conn.close();
+            }
+        }
+        catch (SQLException e){
+            System.out.println("Error closing Repository connection");
+        }
+    }
+
+    public Repository(String filename) {
+        this.filename = filename;
     }
 
     public void add(Employee e)
@@ -39,8 +55,10 @@ public class Repository {
         DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
         try{
+            connectDB();
+
             String query =  "INSERT INTO Employee " +
-                    String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d",
+                    String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d)",
                             e.getId(),
                             e.getName(),
                             e.getSurname(),
@@ -54,7 +72,7 @@ public class Repository {
                             (e.isIs_sharing()) ? 1 : 0);
             stmt.executeUpdate(query);
 
-            conn.commit();
+            disconnectDB();
 
         }
         catch (SQLException ex){
@@ -69,6 +87,7 @@ public class Repository {
 
         try
         {
+
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("Name");
@@ -95,6 +114,7 @@ public class Repository {
 
                 items.add(createEmployeeFromData(id, name, surname, email, password, car_plate, neighbourhood, date, multiplier,
                         parking_spot, is_sharing));
+
             }
         }
         catch (SQLException e){
@@ -117,10 +137,14 @@ public class Repository {
     public ArrayList<Employee> getAll(){
         ArrayList<Employee> items = new ArrayList<>();
         try{
+            connectDB();
+
             String query = "SELECT * FROM Employee";
             ResultSet rs = stmt.executeQuery(query);
             items = getEmployees(rs);
             rs.close();
+
+            disconnectDB();
         }
         catch (SQLException exc){
             System.out.println(exc.getMessage());
@@ -132,29 +156,21 @@ public class Repository {
         Employee e = null;
 
         try{
+            connectDB();
+
             String query = "SELECT * FROM Employee WHERE email = \'" + email + "\'";
             ResultSet rs = stmt.executeQuery(query);
             e = getEmployee(rs);
 
             rs.close();
+
+            disconnectDB();
         }
         catch (SQLException exc){
             System.out.println(exc.getMessage());
         }
 
         return e;
-    }
-
-    public void close(){
-        try{
-            stmt.close();
-            conn.commit();
-            conn.close();
-        }
-        catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
-
     }
 
 
