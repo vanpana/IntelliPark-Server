@@ -27,6 +27,7 @@ public class PeopleInZoneThread implements Runnable{
 
         try {
             if (found == null) result.add("false");
+            else if (ctrl.doIHaveSpot(ctrl.getEmployee(input_email).getId())) result.add("");
             else {
                 ArrayList<Employee> zoneResult = ctrl.getParkingSpotsFromZone(found.getId(), found.getNeighbourhood());
                 for (Employee emp : zoneResult)

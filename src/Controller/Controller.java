@@ -108,6 +108,15 @@ public class Controller {
         return sortedEmployees;
     }
 
+    public boolean doIHaveSpot(int id){
+        int counter = getTotalParkingSpots();
+        for (Employee emp : getParkingSpots()){
+            if (counter < 0) return false;
+            if (emp.getId() == id) return true;
+        }
+        return false;
+    }
+
 
     private static Map<Employee, Float> sortByValue(Map<Employee, Float> unsortMap) {
 
