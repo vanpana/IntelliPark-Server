@@ -35,8 +35,9 @@ public class TableGUI {
         JFrame frame = new JFrame("Table");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
-        frame.setPreferredSize(new Dimension(1920, 1080));
-        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frame.setPreferredSize(new Dimension(600, 600));
+        //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frame.getContentPane().setBackground( Color.decode("#BDC3C7") );
 
         String[] column = {"Name"};
         model = new DefaultTableModel(column, 0);
@@ -47,9 +48,8 @@ public class TableGUI {
         };
 
 
-
         JScrollPane pane = new JScrollPane(table);
-        pane.setBounds(200, 100, 1520, 580);
+        pane.setBounds(0, 0, 600, 400);
         pane.setVisible(true);
         frame.add(pane);
 
@@ -59,7 +59,8 @@ public class TableGUI {
             displayTable();
         });
         frame.add(addPersonButton);
-        addPersonButton.setBounds(740, 720, 120, 20);
+        addPersonButton.setBounds(70, 420, 120, 20);
+        //addPersonButton.setBounds(740, 720, 120, 20);
 
         JButton editPersonButton = new MaterialButton("Edit person");
         editPersonButton.addActionListener((e) -> {
@@ -67,29 +68,29 @@ public class TableGUI {
             displayTable();
         });
         frame.add(editPersonButton);
-        editPersonButton.setBounds(900, 720, 120, 20);
+        editPersonButton.setBounds(230, 420, 120, 20);
 
         JButton deletePersonButton = new MaterialButton("Delete person");
         deletePersonButton.addActionListener((e) -> {
             //TODO: Delete
         });
         frame.add(deletePersonButton);
-        deletePersonButton.setBounds(1060, 720, 120, 20);
+        deletePersonButton.setBounds(390, 420, 120, 20);
 
         JButton addVacationButton = new MaterialButton("Add vacation");
         addVacationButton.addActionListener((e) -> {
             new VacationGUI(ctrl);
         });
         frame.add(addVacationButton);
-        addVacationButton.setBounds(740, 760, 120, 20);
+        addVacationButton.setBounds(150, 460, 120, 20);
 
         JButton startConnectionButton = new MaterialButton("Start connection");
         JButton stopConnectionButton = new MaterialButton("Stop connection");
         stopConnectionButton.setVisible(false);
         stopConnectionButton.setEnabled(false);
 
-        startConnectionButton.setBounds(1060, 760, 160, 20);
-        stopConnectionButton.setBounds(1060, 800, 160, 20);
+        startConnectionButton.setBounds(310, 460, 160, 20);
+        stopConnectionButton.setBounds(310, 460, 160, 20);
         startConnectionButton.addActionListener((e) -> {
             System.out.println("Starting server...");
             server = new TCPServer(ctrl,1234);
@@ -117,11 +118,11 @@ public class TableGUI {
 
         JLabel multiplierLabel = new JLabel("Multiplier:");
         frame.add(multiplierLabel);
-        multiplierLabel.setBounds(740, 800, 60, 20);
+        multiplierLabel.setBounds(220, 500, 60, 20);
 
         JTextField multiplierTextField = new JTextField();
         frame.add(multiplierTextField);
-        multiplierTextField.setBounds(820, 800, 40, 20);
+        multiplierTextField.setBounds(290, 500, 40, 20);
 
         displayTable();
 
