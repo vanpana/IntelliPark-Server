@@ -23,6 +23,8 @@ public class Controller {
     private VacationRepository vacrepo;
     private CarPoolRepository cprepo;
     private int parkingspots;
+    private ArrayList<Integer> rejectedSpots;
+    private HashMap<Integer, ArrayList<Integer>> carRequests;
 
     public Controller(Repository repo, NotificationRepository notifrepo, VacationRepository vacrepo, CarPoolRepository cprepo){
         this.repo = repo;
@@ -30,6 +32,8 @@ public class Controller {
         this.vacrepo = vacrepo;
         this.cprepo = cprepo;
         this.parkingspots = countSpots("parkingmatrix.txt");
+        this.rejectedSpots = new ArrayList<>();
+        this.carRequests = new HashMap<>();
     }
 
     private int countSpots(String filename){
@@ -90,9 +94,11 @@ public class Controller {
         HashMap<Employee, Float> scores = new HashMap<>();
         for (Employee e : repo.getAll()){
 //            System.out.println(e.getEmploy_date());
-            float score = daysInBetween(e.getEmploy_date()) * e.getMultiplier();
-            System.out.println(score);
-            scores.put(e, score);
+            if (!rejectedSpots.contains(e.getId())) {
+                float score = daysInBetween(e.getEmploy_date()) * e.getMultiplier();
+                System.out.println(score);
+                scores.put(e, score);
+            }
         }
 
         Map<Employee, Float> sortedScores = sortByValue(scores);
@@ -153,6 +159,26 @@ public class Controller {
         return fromZone;
     }
 
+    public ArrayList<Employee> getParkingSpotsFromZone(int myid, String neighbourhood){
+        int counter = getTotalParkingSpots();
+        ArrayList<Employee> fromZone = new ArrayList<>();
+
+        for (Employee emp : getParkingSpots()){
+            System.out.println(counter);
+            System.out.println(emp.getNeighbourhood() + " vs " + neighbourhood);
+            if (counter > 1){
+                if (emp.getNeighbourhood().equals(neighbourhood))
+                    if (carRequests.get(myid) == null || (carRequests.get(myid) != null && !carRequests.get(myid).contains(emp.getId()))) {
+                        fromZone.add(emp);
+                        counter--;
+                    }
+
+                }
+            else break;
+        }
+        return fromZone;
+    }
+
     public ArrayList<Employee> getAll(){
         return repo.getAll();
     }
@@ -193,5 +219,18 @@ public class Controller {
         }
 
         return notifications;
+    }
+
+    public void addRejectedSpot(int id){
+        rejectedSpots.add(id);
+    }
+
+    public void addCarRequest(int passenger_id, int driver_id){
+        if (carRequests.get(passenger_id) == null) carRequests.put(passenger_id, new ArrayList<>());
+        ArrayList<Integer> temp = carRequests.get(passenger_id);
+        temp.add(driver_id);
+        carRequests.put(passenger_id, temp);
+
+        System.out.println(carRequests);
     }
 }

@@ -27,11 +27,12 @@ public class DriverThread implements Runnable {
 
         try {
             if (found == null) { result.add("none"); result.add("none"); }
+            else{
+                result.add(found.getName());
+                result.add(found.getSurname());
 
-            result.add(found.getName());
-            result.add(found.getSurname());
-
-            System.out.println(result);
+                System.out.println(result);
+            }
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);

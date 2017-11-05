@@ -40,7 +40,8 @@ public class TCPServer implements Runnable{
             if (command.size() == 3) {
                 new Thread(new ParkingThread(connectionSocket, command.get(1), ctrl)).start();
             } else System.out.println("Received bad format!");
-        } else if (action.equals("requestRide")) {
+        }
+        else if (action.equals("requestRide")) {
             //TODO: Check if password is correct
             if (command.size() == 4) {
                 ArrayList<String> newcommand = new ArrayList<>();
@@ -48,6 +49,8 @@ public class TCPServer implements Runnable{
                 newcommand.add(command.get(3));
                 newcommand.add(command.get(1));
                 ctrl.addNotification(newcommand);
+                //ctrl.delNotification(Integer.parseInt(command.get(1)));
+                ctrl.addCarRequest(ctrl.getEmployee(command.get(1)).getId(), ctrl.getEmployee(command.get(3)).getId());
                 new Thread(new OkayThread(connectionSocket)).start();
             }
         } else if (action.equals("acceptRide") || action.equals("rejectRide")) {
@@ -73,7 +76,8 @@ public class TCPServer implements Runnable{
 
         else if (action.equals("getPeopleInZone")){
             if (command.size() == 3){
-                new Thread(new PeopleInZoneThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
+                if (ctrl.getCarPoolDriverId(ctrl.getEmployee(command.get(1)).getId()) == -1)
+                    new Thread(new PeopleInZoneThread(connectionSocket, command.get(1), command.get(2), ctrl)).start();
             }
         }
 
@@ -87,6 +91,11 @@ public class TCPServer implements Runnable{
             if (command.size() == 3){
                 new Thread(new DriverThread(connectionSocket, ctrl.getCarPoolDriverId(ctrl.getEmployee(command.get(1)).getId()), ctrl)).start();
             }
+        }
+
+        else if (action.equals("rejectSpot")){
+            if (command.size() == 3)
+                ctrl.addRejectedSpot(ctrl.getEmployee(command.get(1)).getId());
         }
     }
 

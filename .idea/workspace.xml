@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4a18646d-b908-4b18-b547-24807d46d92a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myparking.db" afterPath="$PROJECT_DIR$/myparking.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Controller.java" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/NotificationThread.java" afterPath="$PROJECT_DIR$/src/Model/NotificationThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Vacation.java" afterPath="$PROJECT_DIR$/src/Model/Vacation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/NotificationRepository.java" afterPath="$PROJECT_DIR$/src/Repository/NotificationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/Repository.java" afterPath="$PROJECT_DIR$/src/Repository/Repository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/VacationRepository.java" afterPath="$PROJECT_DIR$/src/Repository/VacationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GUI/TableGUI.java" afterPath="$PROJECT_DIR$/src/View/GUI/TableGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GUI/VacationGUI.java" afterPath="$PROJECT_DIR$/src/View/GUI/VacationGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/DriverThread.java" afterPath="$PROJECT_DIR$/src/Model/DriverThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/PeopleInZoneThread.java" afterPath="$PROJECT_DIR$/src/Model/PeopleInZoneThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/TCPServer.java" afterPath="$PROJECT_DIR$/src/Model/TCPServer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,43 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/Repository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1754#1755#0" expanded="true" />
-                <element signature="e#1794#1795#0" expanded="true" />
-                <element signature="e#5101#5102#0" expanded="true" />
-                <element signature="e#5147#5148#0" expanded="true" />
-                <marker date="1509873877040" expanded="true" signature="1969:1990" ph="INSERT INTO Employee... " />
-                <marker date="1509873877040" expanded="true" signature="3001:3035" ph="UPDATE Emplo... " />
-                <marker date="1509873877040" expanded="true" signature="3001:3081" ph="UPDATE Emplo... " />
-                <marker date="1509873877040" expanded="true" signature="3008:3035" ph="INSERT INTO Employee... " />
-                <marker date="1509873877040" expanded="true" signature="5776:5798" ph="SELECT * FRO... Employee" />
-                <marker date="1509873877040" expanded="true" signature="6250:6304" ph="SELECT * FRO... Employee" />
-                <marker date="1509873877040" expanded="true" signature="6357:6358" ph="SELECT * FRO... Employee" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableGUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GUI/TableGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="80" column="34" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4339#4853#0" expanded="true" />
-                <element signature="e#4852#4853#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VacationGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/GUI/VacationGUI.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VacationRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VacationRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/VacationRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
@@ -82,6 +42,18 @@
                 <marker date="1509877750591" expanded="true" signature="3137:3179" ph="SELECT * FRO... Vacation" />
                 <marker date="1509877750591" expanded="true" signature="3137:3180" ph="SELECT * FRO... Vacation" />
                 <marker date="1509877750591" expanded="true" signature="3684:3706" ph="SELECT * FRO... Notification" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/GUI/TableGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,7 +78,7 @@
       <file leaf-file-name="NotificationThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/NotificationThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="149">
               <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,28 +87,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="190" column="48" lean-forward="true" selection-start-line="190" selection-start-column="48" selection-end-line="190" selection-end-column="48" />
+            <state relative-caret-position="278">
+              <caret line="175" column="17" lean-forward="false" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2111#2112#0" expanded="true" />
-                <element signature="e#2157#2158#0" expanded="true" />
-                <element signature="e#2386#2387#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
+                <element signature="e#2311#2312#0" expanded="true" />
+                <element signature="e#2357#2358#0" expanded="true" />
+                <element signature="e#2586#2587#0" expanded="true" />
+                <element signature="e#2643#2644#0" expanded="true" />
+                <element signature="e#7656#7657#0" expanded="true" />
+                <element signature="e#7693#7694#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vacation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Vacation.java">
+      <file leaf-file-name="PeopleInZoneThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/PeopleInZoneThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="230">
+              <caret line="30" column="93" lean-forward="false" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/DriverThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,8 +142,8 @@
       <file leaf-file-name="TCPServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/TCPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="169">
+              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/View/Matrix.java" />
         <option value="$PROJECT_DIR$/parkingmatrix.txt" />
         <option value="$PROJECT_DIR$/src/Model/ParkingThread.java" />
-        <option value="$PROJECT_DIR$/src/Model/PeopleInZoneThread.java" />
         <option value="$PROJECT_DIR$/src/View/GUI/ServerGUI.form" />
         <option value="$PROJECT_DIR$/src/View/MaterialUI/MaterialButton.java" />
         <option value="$PROJECT_DIR$/src/View/MaterialUI/MaterialLookAndFeel.java" />
@@ -221,16 +208,17 @@
         <option value="$PROJECT_DIR$/src/Model/OkayThread.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Repository/CarPoolRepository.java" />
-        <option value="$PROJECT_DIR$/src/Model/DriverThread.java" />
-        <option value="$PROJECT_DIR$/src/Model/TCPServer.java" />
         <option value="$PROJECT_DIR$/src/Repository/Repository.java" />
         <option value="$PROJECT_DIR$/src/Model/Vacation.java" />
-        <option value="$PROJECT_DIR$/src/View/GUI/TableGUI.java" />
         <option value="$PROJECT_DIR$/src/View/GUI/VacationGUI.java" />
         <option value="$PROJECT_DIR$/src/Model/NotificationThread.java" />
-        <option value="$PROJECT_DIR$/src/Controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/Repository/NotificationRepository.java" />
         <option value="$PROJECT_DIR$/src/Repository/VacationRepository.java" />
+        <option value="$PROJECT_DIR$/src/Model/DriverThread.java" />
+        <option value="$PROJECT_DIR$/src/View/GUI/TableGUI.java" />
+        <option value="$PROJECT_DIR$/src/Model/TCPServer.java" />
+        <option value="$PROJECT_DIR$/src/Model/PeopleInZoneThread.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Controller.java" />
       </list>
     </option>
   </component>
@@ -311,7 +299,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -488,7 +476,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58367000" />
+    <option name="totallyTimeSpent" value="61548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -563,12 +551,6 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/TCPServer.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Repository/Repository.java</url>
           <line>198</line>
           <properties />
@@ -617,16 +599,6 @@
         <state relative-caret-position="169">
           <caret line="843" column="0" lean-forward="false" selection-start-line="843" selection-start-column="0" selection-end-line="843" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/PeopleInZoneThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,51 +870,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DriverThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GUI/TableGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="80" column="34" lean-forward="false" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4339#4853#0" expanded="true" />
-            <element signature="e#4852#4853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Vacation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/TCPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -977,26 +909,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/NotificationThread.java">
+    <entry file="file://$PROJECT_DIR$/src/Repository/VacationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state relative-caret-position="209">
+          <caret line="84" column="45" lean-forward="false" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="190" column="48" lean-forward="true" selection-start-line="190" selection-start-column="48" selection-end-line="190" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
-            <element signature="e#2386#2387#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
+            <marker date="1509877750591" expanded="true" signature="1680:1701" ph="INSERT INTO Vacation... " />
+            <marker date="1509877750591" expanded="true" signature="3137:3179" ph="SELECT * FRO... Vacation" />
+            <marker date="1509877750591" expanded="true" signature="3137:3180" ph="SELECT * FRO... Vacation" />
+            <marker date="1509877750591" expanded="true" signature="3684:3706" ph="SELECT * FRO... Notification" />
           </folding>
         </state>
       </provider>
@@ -1015,16 +937,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/VacationRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/TCPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="84" column="45" lean-forward="false" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+        <state relative-caret-position="169">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509877750591" expanded="true" signature="1680:1701" ph="INSERT INTO Vacation... " />
-            <marker date="1509877750591" expanded="true" signature="3137:3179" ph="SELECT * FRO... Vacation" />
-            <marker date="1509877750591" expanded="true" signature="3137:3180" ph="SELECT * FRO... Vacation" />
-            <marker date="1509877750591" expanded="true" signature="3684:3706" ph="SELECT * FRO... Notification" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DriverThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/NotificationThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GUI/TableGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/PeopleInZoneThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="30" column="93" lean-forward="false" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="175" column="17" lean-forward="false" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#2357#2358#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2643#2644#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7693#7694#0" expanded="true" />
           </folding>
         </state>
       </provider>
