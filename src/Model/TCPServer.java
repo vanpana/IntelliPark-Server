@@ -113,6 +113,12 @@ public class TCPServer implements Runnable{
             if (command.size() == 3)
                 ctrl.addRejectedSpot(ctrl.getEmployee(command.get(1)).getId());
         }
+
+        else if (action.equals("getMap")){
+            if (command.size() == 3){
+                new Thread(new MapThread(connectionSocket)).start();
+            }
+        }
     }
 
     public void run(){
