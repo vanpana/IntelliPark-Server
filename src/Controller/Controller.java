@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Carpool;
 import Model.Employee;
 import Model.Notification;
 import Model.Vacation;
@@ -20,12 +21,14 @@ public class Controller {
     private Repository repo;
     private NotificationRepository notifrepo;
     private VacationRepository vacrepo;
+    private CarPoolRepository cprepo;
     private int parkingspots;
 
-    public Controller(Repository repo, NotificationRepository notifrepo, VacationRepository vacrepo){
+    public Controller(Repository repo, NotificationRepository notifrepo, VacationRepository vacrepo, CarPoolRepository cprepo){
         this.repo = repo;
         this.notifrepo = notifrepo;
         this.vacrepo = vacrepo;
+        this.cprepo = cprepo;
         this.parkingspots = countSpots("parkingmatrix.txt");
     }
 
@@ -50,8 +53,20 @@ public class Controller {
         repo.add(new Employee(id, name, surname, email, password, car_plate, employ_date, multiplier, parking_spot, is_sharing));
     }
 
+    public void addCarpool(int driver_id, int passenger_id){
+        cprepo.add(new Carpool(driver_id, passenger_id));
+    }
+
+    public int getCarPoolDriverId(int id){return cprepo.getCarPoolDriverID(id); }
+
     public Employee getEmployee(String email){
         return repo.getEmployee(email);
+    }
+    public Employee getEmployee(int id){
+        for (Employee emp : repo.getAll()){
+            if (emp.getId() == id) return emp;
+        }
+        return null;
     }
 
     private int daysInBetween(Date date){

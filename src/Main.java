@@ -34,10 +34,10 @@ public class Main {
 
         NotificationRepository notifrepo = new NotificationRepository("myparking.db");
         VacationRepository vacrepo = new VacationRepository("myparking.db");
+        CarPoolRepository cprepo = new CarPoolRepository("myparking.db");
 
 
-
-        Controller ctrl = new Controller(repo, notifrepo, vacrepo);
+        Controller ctrl = new Controller(repo, notifrepo, vacrepo, cprepo);
 
         TableGUI gui = new TableGUI(ctrl);
     }

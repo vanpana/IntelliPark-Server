@@ -3,22 +3,12 @@ package Model;
 import java.util.Date;
 
 public class Carpool {
-    private Date date;
     private int driver_id;
     private int passenger_id;
 
-    public Carpool(Date date, int driver_id, int passenger_id) {
-        this.date = date;
+    public Carpool(int driver_id, int passenger_id) {
         this.driver_id = driver_id;
         this.passenger_id = passenger_id;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public int getDriver_id() {
@@ -40,7 +30,6 @@ public class Carpool {
     @Override
     public String toString() {
         return "Carpool{" +
-                "date=" + date +
                 ", driver_id=" + driver_id +
                 ", passenger_id=" + passenger_id +
                 '}';
