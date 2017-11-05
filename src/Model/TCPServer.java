@@ -63,9 +63,25 @@ public class TCPServer implements Runnable{
 
                 ctrl.addCarpool(ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho()).getId(),
                         ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom()).getId());
-                ctrl.delNotification(Integer.parseInt(command.get(1)));
+
                 ctrl.addNotification(newcommand);
                 new Thread(new OkayThread(connectionSocket)).start();
+
+                if (action.equals("acceptRide")){
+                    int id = ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom()).getId();
+                    float multiplier = ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom()).getMultiplier()
+                            + (float) 0.05;
+                    ctrl.updateMultiplier(id, multiplier);
+
+
+                    id = ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho()).getId();
+                    multiplier = ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho()).getMultiplier()
+                            + (float) 0.05;
+                    ctrl.updateMultiplier(id, multiplier);
+
+                }
+
+                ctrl.delNotification(Integer.parseInt(command.get(1)));
 
             }
         } else if (action.equals("getNotifications")) {

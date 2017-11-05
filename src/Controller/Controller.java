@@ -57,6 +57,7 @@ public class Controller {
         repo.add(new Employee(id, name, surname, email, password, car_plate, employ_date, multiplier, parking_spot, is_sharing));
     }
 
+    public void updateMultiplier(int id, float multiplier) { repo.updateMultiplier(id, multiplier); }
     public void addCarpool(int driver_id, int passenger_id){
         cprepo.add(new Carpool(driver_id, passenger_id));
     }
@@ -113,6 +114,7 @@ public class Controller {
         for (Employee emp : getParkingSpots()){
             if (counter < 0) return false;
             if (emp.getId() == id) return true;
+            counter--;
         }
         return false;
     }

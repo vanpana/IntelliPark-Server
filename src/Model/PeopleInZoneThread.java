@@ -27,7 +27,7 @@ public class PeopleInZoneThread implements Runnable{
 
         try {
             if (found == null) result.add("false");
-            else if (ctrl.doIHaveSpot(ctrl.getEmployee(input_email).getId())) result.add("");
+            else if (ctrl.doIHaveSpot(ctrl.getEmployee(input_email).getId())) { result.add(""); System.out.println("Already have spot");}
             else {
                 ArrayList<Employee> zoneResult = ctrl.getParkingSpotsFromZone(found.getId(), found.getNeighbourhood());
                 for (Employee emp : zoneResult)
@@ -38,6 +38,7 @@ public class PeopleInZoneThread implements Runnable{
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);
+            System.out.println(result);
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
