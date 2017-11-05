@@ -181,8 +181,18 @@ public class NotificationRepository {
                 ArrayList<String> temp = new ArrayList<>();
                 temp.add(notif.getNotification());
                 temp.add(String.valueOf(notif.getId()));
-                temp.add(new Repository("myparking.db").getEmployee(notif.getFromWhom()).getName());
-                temp.add(new Repository("myparking.db").getEmployee(notif.getFromWhom()).getSurname());
+
+                if (notif.getNotification().equals("isVacation")){
+                    DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+                    temp.add(df.format(new VacationRepository("myparking.db").getVacationById(
+                            new Repository("myparking.db").getEmployee(notif.getFromWhom()).getId()).getStart_date()));
+                    temp.add(df.format(new VacationRepository("myparking.db").getVacationById(
+                            new Repository("myparking.db").getEmployee(notif.getFromWhom()).getId()).getEnd_date()));
+                }
+                else{
+                    temp.add(new Repository("myparking.db").getEmployee(notif.getFromWhom()).getName());
+                    temp.add(new Repository("myparking.db").getEmployee(notif.getFromWhom()).getSurname());
+                }
 //                temp.add(notif.getToWho());
 //                temp.add(notif.getFromWhom());
                 notifications.add(temp);

@@ -39,6 +39,7 @@ public class NotificationThread implements Runnable {
             objectOutput.writeInt(notifications.size());
 
             for (ArrayList<String> al : notifications){
+                System.out.print("Notif is: ");
                 System.out.println(al);
                 objectOutput.writeObject(al);
             }

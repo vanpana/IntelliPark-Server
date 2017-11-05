@@ -63,8 +63,6 @@ public class Repository {
 
     public void add(Employee e)
     {
-
-        disconnectDB();
         DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
         try{
@@ -95,7 +93,25 @@ public class Repository {
         finally {
             disconnectDB();
         }
+    }
 
+    public void updateMultiplier(int id, float multiplier){
+        try{
+            connectDB();
+
+            String query = "UPDATE Employee SET multiplier =  " + String.valueOf(multiplier) + " WHERE id = " + String.valueOf(id);
+
+            stmt.execute(query);
+
+
+        }
+        catch (SQLException ex){
+            System.out.print("Add repository: ");
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            disconnectDB();
+        }
 
     }
 

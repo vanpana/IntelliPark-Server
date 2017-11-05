@@ -19,7 +19,7 @@ public class TableGUI {
     private DefaultTableModel model;
     private List<String> listOfPeople = new ArrayList<>();
     private Controller ctrl;
-    TCPServer server;
+    private TCPServer server;
 
     public TableGUI(Controller ctrl) {
         MaterialLookAndFeel ui = new MaterialLookAndFeel (GUITheme.LIGHT_THEME);
@@ -31,10 +31,6 @@ public class TableGUI {
         }
 
         this.ctrl = ctrl;
-//        listOfPeople.add("Eric Roca");
-//        listOfPeople.add("Norbert Herciu");
-//        listOfPeople.add("Dorinel Panaite");
-//        listOfPeople.add("Catalin Podariu");
 
         JFrame frame = new JFrame("Table");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,6 +45,8 @@ public class TableGUI {
                 return false;
             }
         };
+
+
 
         JScrollPane pane = new JScrollPane(table);
         pane.setBounds(200, 100, 1520, 580);
@@ -73,14 +71,14 @@ public class TableGUI {
 
         JButton deletePersonButton = new MaterialButton("Delete person");
         deletePersonButton.addActionListener((e) -> {
-            //do something
+            //TODO: Delete
         });
         frame.add(deletePersonButton);
         deletePersonButton.setBounds(1060, 720, 120, 20);
 
         JButton addVacationButton = new MaterialButton("Add vacation");
         addVacationButton.addActionListener((e) -> {
-            new VacationGUI();
+            new VacationGUI(ctrl);
         });
         frame.add(addVacationButton);
         addVacationButton.setBounds(740, 760, 120, 20);
@@ -126,6 +124,19 @@ public class TableGUI {
         multiplierTextField.setBounds(820, 800, 40, 20);
 
         displayTable();
+
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                int row = table.rowAtPoint(evt.getPoint());
+                int col = table.columnAtPoint(evt.getPoint());
+                if (row >= 0) {
+                    String email = table.getModel().getValueAt(row, 2).toString();
+                    multiplierTextField.setText(String.valueOf(ctrl.getEmployee(email).getMultiplier()));
+
+                }
+            }
+        });
 
         frame.pack();
         frame.setVisible(true);

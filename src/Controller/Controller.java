@@ -69,6 +69,9 @@ public class Controller {
         return null;
     }
 
+    public void addVacation(Date start, Date end, int id){
+        vacrepo.add(new Vacation(start, end, id));
+    }
     private int daysInBetween(Date date){
         DateFormat todayFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date today = new Date();
