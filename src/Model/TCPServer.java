@@ -48,6 +48,7 @@ public class TCPServer implements Runnable{
                 newcommand.add(command.get(3));
                 newcommand.add(command.get(1));
                 ctrl.addNotification(newcommand);
+                new Thread(new OkayThread(connectionSocket)).start();
             }
         } else if (action.equals("acceptRide") || action.equals("rejectRide")) {
             if (command.size() == 2) {
@@ -57,10 +58,11 @@ public class TCPServer implements Runnable{
                 newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom());
                 newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho());
 
-                ctrl.addCarpool(ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom()).getId(),
-                        ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho()).getId());
+                ctrl.addCarpool(ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho()).getId(),
+                        ctrl.getEmployee(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom()).getId());
                 ctrl.delNotification(Integer.parseInt(command.get(1)));
                 ctrl.addNotification(newcommand);
+                new Thread(new OkayThread(connectionSocket)).start();
 
             }
         } else if (action.equals("getNotifications")) {
@@ -83,9 +85,7 @@ public class TCPServer implements Runnable{
 
         else if (action.equals("myDriver")){
             if (command.size() == 3){
-
-
-                new Thread(new DriverThread(connectionSocket, ctrl.getCarPoolDriverId(ctrl.getEmployee(command.get(1)).getId()), ctrl));
+                new Thread(new DriverThread(connectionSocket, ctrl.getCarPoolDriverId(ctrl.getEmployee(command.get(1)).getId()), ctrl)).start();
             }
         }
     }

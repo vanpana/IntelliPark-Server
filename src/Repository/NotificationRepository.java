@@ -86,7 +86,7 @@ public class NotificationRepository {
                             n.getFromWhom());
 
             System.out.println(query);
-            stmt.execute(query);
+            stmt.executeUpdate(query);
 
             disconnectDB();
 

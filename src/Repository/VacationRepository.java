@@ -67,6 +67,7 @@ public class VacationRepository {
 
         }
         catch (SQLException ex){
+            disconnectDB();
             System.out.print("Vacation SQL: ");
             System.out.println(ex.getMessage());
         }

@@ -15,6 +15,8 @@ public class DriverThread implements Runnable {
     public DriverThread(Socket connectionSocket, int driver_id, Controller ctrl) {
         this.connectionSocket = connectionSocket;
         this.driver_id = driver_id;
+        System.out.print("Driver in thread is: ");
+        System.out.println(driver_id);
         this.ctrl = ctrl;
     }
 
@@ -22,13 +24,14 @@ public class DriverThread implements Runnable {
     public void run() {
         ArrayList<String> result = new ArrayList<>();
         Employee found = ctrl.getEmployee(driver_id);
-        ArrayList<Employee> sorted = ctrl.getParkingSpots();
 
         try {
             if (found == null) { result.add("none"); result.add("none"); }
 
             result.add(found.getName());
             result.add(found.getSurname());
+
+            System.out.println(result);
 
             ObjectOutputStream objectOutput = new ObjectOutputStream(connectionSocket.getOutputStream());
             objectOutput.writeObject(result);

@@ -52,7 +52,7 @@ public class CarPoolRepository {
         try{
             connectDB();
 
-            String query =  "INSERT INTO Vacation " +
+            String query =  "INSERT INTO Carpooling " +
                     String.format("VALUES (%d, %d)",
                             cp.getDriver_id(),
                             cp.getPassenger_id());
@@ -111,6 +111,7 @@ public class CarPoolRepository {
             disconnectDB();
             System.out.println(exc.getMessage());
         }
+        System.out.println(items);
         return items;
     }
 

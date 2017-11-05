@@ -3,6 +3,11 @@ package Repository;
 import Model.Employee;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
+import java.nio.channels.OverlappingFileLockException;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -18,16 +23,17 @@ public class Repository {
     private Statement stmt = null;
 
     private void connectDB(){
+
         File f = new File(filename);
         if(f.exists() && !f.isDirectory()) {
             try {
                 Class.forName("org.sqlite.JDBC");
                 //conn = DriverManager.getConnection("jdbc:sqlite:" + this.filename);
                 conn = DriverManager.getConnection("jdbc:sqlite:/Users/vanpana/Documents/IntelliJ/IntelliPark-Server/myparking.db");
-                conn.setAutoCommit(false);
+                conn.setAutoCommit(true);
                 stmt = conn.createStatement();
             } catch (SQLException |ClassNotFoundException e) {
-                System.out.print("Vacation SQL: ");
+                System.out.print("Repository SQL: ");
                 System.out.println(e.getMessage());
             }
         }
@@ -35,15 +41,20 @@ public class Repository {
     }
 
     private void disconnectDB(){
-        try{
-            if (!conn.isClosed()) {
+        if (stmt != null) {
+            try {
+                stmt.close();
+            } catch (SQLException e) { /* ignored */}
+        }
+        if (conn != null) {
+            try {
                 conn.commit();
                 conn.close();
-            }
+            } catch (SQLException e) { /* ignored */}
         }
-        catch (SQLException e){
-            System.out.println("Error closing Repository connection");
-        }
+        stmt = null;
+        conn = null;
+
     }
 
     public Repository(String filename) {
@@ -52,10 +63,13 @@ public class Repository {
 
     public void add(Employee e)
     {
+
+        disconnectDB();
         DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
         try{
             connectDB();
+
 
             String query =  "INSERT INTO Employee " +
                     String.format("VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%f,%d,%d)",
@@ -70,14 +84,16 @@ public class Repository {
                             e.getMultiplier(),
                             e.getParking_spot(),
                             (e.isIs_sharing()) ? 1 : 0);
-            stmt.executeUpdate(query);
+            stmt.execute(query);
 
-            disconnectDB();
 
         }
         catch (SQLException ex){
-            disconnectDB();
+            System.out.print("Add repository: ");
             System.out.println(ex.getMessage());
+        }
+        finally {
+            disconnectDB();
         }
 
 
@@ -146,11 +162,14 @@ public class Repository {
             items = getEmployees(rs);
             rs.close();
 
-            disconnectDB();
+
         }
         catch (SQLException exc){
-            disconnectDB();
+
             System.out.println(exc.getMessage());
+        }
+        finally {
+            disconnectDB();
         }
         return items;
     }
@@ -167,11 +186,13 @@ public class Repository {
 
             rs.close();
 
-            disconnectDB();
+
         }
         catch (SQLException exc){
-            disconnectDB();
             System.out.println(exc.getMessage());
+        }
+        finally {
+            disconnectDB();
         }
 
         return e;
