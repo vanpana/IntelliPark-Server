@@ -106,6 +106,7 @@ public class Controller {
 
         ArrayList<Employee> sortedEmployees = new ArrayList<>();
         sortedEmployees.addAll(sortedScores.keySet());
+        System.out.println(sortedEmployees);
         return sortedEmployees;
     }
 

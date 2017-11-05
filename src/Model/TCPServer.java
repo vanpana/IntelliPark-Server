@@ -115,7 +115,7 @@ public class TCPServer implements Runnable{
         }
 
         else if (action.equals("getMap")){
-            if (command.size() == 3){
+            if (command.size() == 1){
                 new Thread(new MapThread(connectionSocket)).start();
             }
         }

@@ -1,6 +1,7 @@
 package Repository;
 
 import Model.Employee;
+import View.GUI.TableGUI;
 
 import java.io.File;
 import java.io.IOException;
@@ -159,7 +160,12 @@ public class Repository {
     }
 
     private Employee getEmployee(ResultSet rs){
-        return getEmployees(rs).get(0);
+        ArrayList<Employee> a = getEmployees(rs);
+        if (a != null && a.size() > 0)
+            return a.get(0);
+        else
+            return null;
+
     }
 
     private Employee createEmployeeFromData(int id, String name, String surname, String email, String password,

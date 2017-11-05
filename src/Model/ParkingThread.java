@@ -32,7 +32,7 @@ public class ParkingThread implements Runnable {
                     if (e.getId() == found.getId()) break;
                     counter++;
                 }
-                if (counter <= ctrl.getTotalParkingSpots()) result.add(String.valueOf(counter + 1));
+                if (counter <= ctrl.getTotalParkingSpots()) result.add(String.valueOf(counter));
                 else result.add(String.valueOf(0));
             }
 
