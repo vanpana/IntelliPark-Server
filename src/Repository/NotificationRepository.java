@@ -86,12 +86,13 @@ public class NotificationRepository {
                             n.getFromWhom());
 
             System.out.println(query);
-            stmt.executeUpdate(query);
+            stmt.execute(query);
 
             disconnectDB();
 
         }
         catch (SQLException ex){
+            disconnectDB();
             System.out.print("Notification SQL: ");
             System.out.println(ex.getMessage());
         }
@@ -103,12 +104,13 @@ public class NotificationRepository {
             String query =  "DELETE FROM Notification WHERE id = " +
                     String.valueOf(id);
 
-            stmt.executeUpdate(query);
+            stmt.execute(query);
 
             disconnectDB();
 
         }
         catch (SQLException ex){
+            disconnectDB();
             System.out.print("Notification SQL: ");
             System.out.println(ex.getMessage());
         }
@@ -159,6 +161,7 @@ public class NotificationRepository {
             disconnectDB();
         }
         catch (SQLException exc){
+            disconnectDB();
             System.out.println(exc.getMessage());
         }
         return items;
@@ -189,6 +192,7 @@ public class NotificationRepository {
             disconnectDB();
         }
         catch (SQLException exc){
+            disconnectDB();
             System.out.println(exc.getMessage());
         }
         return notifications;

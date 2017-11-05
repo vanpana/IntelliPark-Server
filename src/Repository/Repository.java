@@ -76,6 +76,7 @@ public class Repository {
 
         }
         catch (SQLException ex){
+            disconnectDB();
             System.out.println(ex.getMessage());
         }
 
@@ -118,6 +119,7 @@ public class Repository {
             }
         }
         catch (SQLException e){
+            disconnectDB();
             System.out.println(e.getMessage());
         }
 
@@ -147,6 +149,7 @@ public class Repository {
             disconnectDB();
         }
         catch (SQLException exc){
+            disconnectDB();
             System.out.println(exc.getMessage());
         }
         return items;
@@ -167,6 +170,7 @@ public class Repository {
             disconnectDB();
         }
         catch (SQLException exc){
+            disconnectDB();
             System.out.println(exc.getMessage());
         }
 

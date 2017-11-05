@@ -51,11 +51,12 @@ public class TCPServer implements Runnable{
             }
         } else if (action.equals("acceptRide") || action.equals("rejectRide")) {
             if (command.size() == 2) {
-                //ctrl.addNotification(command);
+
                 ArrayList<String> newcommand = new ArrayList<>();
                 newcommand.add(command.get(0));
                 newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getFromWhom());
                 newcommand.add(ctrl.getNotification(Integer.parseInt(command.get(1))).getToWho());
+                ctrl.delNotification(Integer.parseInt(command.get(1)));
                 ctrl.addNotification(newcommand);
 
             }
