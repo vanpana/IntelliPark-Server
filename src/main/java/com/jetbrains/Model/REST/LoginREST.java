@@ -14,8 +14,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 
-@Path("/getPeopleInZone")
-public class PeopleInZoneREST {
+@Path("/login")
+public class LoginREST {
     @GET
     @Path("/{email},{password}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,19 +27,10 @@ public class PeopleInZoneREST {
                 new VacationRepository("resources/myparking.db"),
                 new CarPoolRepository("resources/myparking.db"));
 
-        if (ctrl.checkLogin(email, password)) {
-            ArrayList<Employee> peopleInZone = ctrl.getParkingSpotsFromZone(ctrl.getEmployee(email).getNeighbourhood());
-            int counter = 0;
-            for (Employee emp : peopleInZone){
-                output = output  +  "[" + emp.getName() + " " + emp.getSurname() + "]";
-                if (counter != peopleInZone.size() - 1)
-                    output = output + ",";
-                counter++;
-            }
-
-            output += "]";
-        }
+        if (ctrl.checkLogin(email, password)) output += "[true]";
         else output = "[bad login]";
+
+        output += "]";
 
         return output;
     }

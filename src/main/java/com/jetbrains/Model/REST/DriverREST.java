@@ -14,8 +14,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 
-@Path("/getPeopleInZone")
-public class PeopleInZoneREST {
+@Path("/getDriver")
+public class DriverREST {
     @GET
     @Path("/{email},{password}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -28,19 +28,20 @@ public class PeopleInZoneREST {
                 new CarPoolRepository("resources/myparking.db"));
 
         if (ctrl.checkLogin(email, password)) {
-            ArrayList<Employee> peopleInZone = ctrl.getParkingSpotsFromZone(ctrl.getEmployee(email).getNeighbourhood());
-            int counter = 0;
-            for (Employee emp : peopleInZone){
-                output = output  +  "[" + emp.getName() + " " + emp.getSurname() + "]";
-                if (counter != peopleInZone.size() - 1)
-                    output = output + ",";
-                counter++;
-            }
+            int driver_id = ctrl.getCarPoolDriverId(ctrl.getEmployee(email).getId());
+            if (driver_id == -1) output += "none";
+            else {
+                Employee found = ctrl.getEmployee(driver_id);
 
-            output += "]";
+                if (found == null) output += "none";
+                else
+                    output += found.getName() + " " + found.getSurname();
+                output += "]";
+            }
         }
         else output = "[bad login]";
 
         return output;
+
     }
 }

@@ -232,8 +232,6 @@ public class Controller {
 
 
     public ArrayList<ArrayList<String>> getNotifications(String email){
-        ArrayList<ArrayList<String>> items = notifrepo.getAll();
-
         ArrayList<ArrayList<String>> notifications = new ArrayList<>();
 
         for(ArrayList<String> al : notifrepo.getAll()){
