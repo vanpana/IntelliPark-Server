@@ -1,52 +1,26 @@
-vaadin-sample
-==============
+Vaadin QuickTickets Dashboard Demo
+==================================
 
-Template for a simple Vaadin application that only requires a Servlet 3.0 container to run.
+Responsive application demo/template built using only server-side Java with [Vaadin Framework](https://vaadin.com/framework). Showcasing big data, data visualization, drag 'n' drop and other Vaadin features.
 
+[![View the application](https://vaadin.com/documents/10187/2487938/Dashboard+Demo+2014/a37b2c4d-c941-48fe-97c3-ad5a60586882?t=1412769929183)](http://demo.vaadin.com/dashboard)
 
-Workflow
-========
+Running the App
+==
+Run 'mvn -Pproduction-mode jetty:run' to run in a local jetty. Open in localhost:8080
 
-To compile the entire project, run "mvn install".
+Run the Maven 'install' target and deploy the resulting WAR file to your Java application server.
 
-To run the application, run "mvn jetty:run" and open http://localhost:8080/ .
+You need a license for Vaadin Charts to compile the widgetset. You can get a free 30 day trial license by going to https://vaadin.com/directory#addon/vaadin-charts and clicking the orange "Free trial key" button. It gives you a trial key. [See the help section](https://vaadin.com/directory/help/installing-cval-license) which shows you how to install the key.
 
-To produce a deployable production mode WAR:
-- change productionMode to true in the servlet class configuration (nested in the UI class)
-- run "mvn clean package"
-- test the war file with "mvn jetty:run-war"
+Basically you need to create a file name ".vaadin.charts.developer.license" in your HOME directory, and place the key there.
 
-Client-Side compilation
--------------------------
+Run 'mvn -Pproduction-mode verify' to run the Vaadin TestBench tests. 
 
-The generated maven project is using an automatically generated widgetset by default. 
-When you add a dependency that needs client-side compilation, the maven plugin will 
-automatically generate it for you. Your own client-side customizations can be added into
-package "client".
+*Note*: You need a valid [Vaadin TestBench license](https://vaadin.com/add-ons/testbench) and [Firefox browser](https://www.mozilla.org/firefox/) installed to run the tests.
 
-Debugging client side code
-  - run "mvn vaadin:run-codeserver" on a separate console while the application is running
-  - activate Super Dev Mode in the debug window of the application
+Licenses
+==
+The source code is released under Apache 2.0.
 
-Developing a theme using the runtime compiler
--------------------------
-
-When developing the theme, Vaadin can be configured to compile the SASS based
-theme at runtime in the server. This way you can just modify the scss files in
-your IDE and reload the browser to see changes.
-
-To use the runtime compilation, open pom.xml and comment out the compile-theme 
-goal from vaadin-maven-plugin configuration. To remove a possibly existing 
-pre-compiled theme, run "mvn clean package" once.
-
-When using the runtime compiler, running the application in the "run" mode 
-(rather than in "debug" mode) can speed up consecutive theme compilations
-significantly.
-
-It is highly recommended to disable runtime compilation for production WAR files.
-
-Using Vaadin pre-releases
--------------------------
-
-If Vaadin pre-releases are not enabled by default, use the Maven parameter
-"-P vaadin-prerelease" or change the activation default value of the profile in pom.xml .
+The application uses the [Vaadin Charts](https://vaadin.com/charts) add-on, which is released under the Commercial Vaadin Addon License: https://vaadin.com/license/cval-3
