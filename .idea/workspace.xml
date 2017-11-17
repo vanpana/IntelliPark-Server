@@ -2,53 +2,454 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="vaadin-sample:war exploded" />
+      <artifact name="smartspark-dashboard:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ee161d-6250-4dfd-a82b-25dac3353ee0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_3_jre.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_guava_guava_23_3_jre.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Components/ProfilePreferencesWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/DashboardNotification.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEventBus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardEdit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardNavigator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardViewType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/DashboardUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/MainView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/OkayThread.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/chatUI.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/LoginUI.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/LoginView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Carpool.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Carpool.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Employee.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/MapThread.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/MapThread.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Notification.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Notification.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/ParkingBlock.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/ParkingBlock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Vacation.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Vacation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/ServerView.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/View/ServerView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/smartspark_dashboard_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/smartspark_dashboard_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ant_ant_1_6_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__colt_colt_1_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_gwt_gwt_dev_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_gwt_gwt_elemental_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_gwt_gwt_user_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_jsinterop_jsinterop_annotations_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_jsinterop_jsinterop_annotations_sources_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_gentyref_gentyref_1_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_50_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_addon_vaadin_charts_4_0_0_alpha4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_addon_vaadin_charts_model_4_0_0_alpha4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_flute_flute_1_3_0_gg2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_client_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_client_compiled_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_client_compiler_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_compatibility_client_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_compatibility_server_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_compatibility_shared_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_sass_compiler_0_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_server_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_shared_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_testbench_4_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_testbench_api_7_4_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_testbench_core_4_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_themes_8_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_5_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_sources_1_0_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mx4j_mx4j_tools_3_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_18.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_19.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_22.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_48.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_48.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_commonjava_googlecode_markdown4j_markdown4j_2_2_cj_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_easymock_easymock_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_apache_jsp_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jndi_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_plus_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_2_14_v20151106.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_toolchain_jetty_schemas_3_1_M0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_13_v20150730.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_13_v20150730.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_13_v20150730.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_archetypes_jersey_quickstart_webapp_2_18.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_9_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jasper_apache_el_8_0_9_M3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jasper_apache_jsp_8_0_9_M3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_6_1_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_5_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_5_0_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_peimari_maddon_1_15.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_rc_repacked_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_repacked_7_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_leg_rc_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_server_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_46_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jdk14_1_6_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_vaadin_addon_confirmdialog_2_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_vaadin_addons_googleanalyticstracker_2_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webbitserver_webbit_0_4_14.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_20_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tapestry_tapestry_4_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/338AB0A2CBC7549BF6F2D0493E12B3A1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/396F806CD63ABD414BFBB9D57429F05B.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/885A87A7E7766ECC9E47804DF6012642.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/925CD9821791EA26CBB5DF27883F827D.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/9668843DD669E9FE0CE19A706807A347.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/9CC1FA2482B310CBEFC83B232FDAD06C.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/C55E667BC26B262A0AA1DE6F7D88FD42.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/DE709C1CAB0F65BCC5BEF11EDA73A925.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/DF7764EEC1903CD03C9545B354D8D8E4.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/clear.cache.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com.vaadin.demo.dashboard.DashboardWidgetSet.devmode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com.vaadin.demo.dashboard.DashboardWidgetSet.nocache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_calendar/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_calendar/img/arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/arrow-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/arrow-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/barChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/hold.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/lineChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/move.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/popup_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/right_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scatterChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-grip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-left-mobile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-right-mobile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scrollbar-area-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scrollbar-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroller.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroller_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeftBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeftTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRightBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRightTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/vertical-sprites.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/compilation-mappings.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/338AB0A2CBC7549BF6F2D0493E12B3A1/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/338AB0A2CBC7549BF6F2D0493E12B3A1/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/885A87A7E7766ECC9E47804DF6012642/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/885A87A7E7766ECC9E47804DF6012642/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/925CD9821791EA26CBB5DF27883F827D/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/925CD9821791EA26CBB5DF27883F827D/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9668843DD669E9FE0CE19A706807A347/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9668843DD669E9FE0CE19A706807A347/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9CC1FA2482B310CBEFC83B232FDAD06C/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9CC1FA2482B310CBEFC83B232FDAD06C/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/C55E667BC26B262A0AA1DE6F7D88FD42/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/C55E667BC26B262A0AA1DE6F7D88FD42/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/WEB-INF/deploy/com.cyberschnitzel.smartspark.DashboardWidgetSet/rpcPolicyManifest/manifest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/333A66D5307B1C8C9935C59A877F1993.cache.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/51DCB1D3F3D956ACC80F89D3CF0AC5BE.cache.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/AFF32A9CBBE3AEDE1BFF2CEDF3187974.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/AFF32A9CBBE3AEDE1BFF2CEDF3187974.cache.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/C81F8CA7CA7012F31BDE883DF6C99E61.cache.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/D03281BC3FDB49177B485D1DC10A13C4.cache.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/clear.cache.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/com.cyberschnitzel.smartspark.DashboardWidgetSet.devmode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/com.cyberschnitzel.smartspark.DashboardWidgetSet.devmode.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/com.cyberschnitzel.smartspark.DashboardWidgetSet.nocache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/com.cyberschnitzel.smartspark.DashboardWidgetSet.nocache.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/compilation-mappings.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/1.cache.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/2.cache.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/3.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/VAADIN/widgetsets/com.cyberschnitzel.smartspark.DashboardWidgetSet/deferredjs/AFF32A9CBBE3AEDE1BFF2CEDF3187974/3.cache.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/i18n/client/CurrencyList_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/i18n/client/constants/NumberConstantsImpl_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/i18n/client/impl/LocaleInfoImpl_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/i18n/client/impl/LocaleInfoImpl_shared.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/lang/com_00046cyberschnitzel_00046smartspark_00046DashboardWidgetSet__EntryMethodHolder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/user/client/DocumentModeAsserter_DocumentModeProperty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/user/client/ui/FormPanel_IFrameTemplateImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/user/client/ui/MenuBar_Resources_default_InlineClientBundleGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/user/client/ui/impl/ClippedImageImpl_DraggableTemplateImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/google/gwt/user/client/ui/impl/ClippedImageImpl_TemplateImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/addon/charts/client/HighchartResources_default_InlineClientBundleGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/client/debug/internal/theme/DebugWindowStyles_default_InlineClientBundleGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/client/metadata/ConnectorBundleLoaderImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/client/ui/dd/VAcceptCriterionFactoryImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/client/ui/richtextarea/VRichTextToolbar_Images_default_InlineClientBundleGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/client/ui/richtextarea/VRichTextToolbar_Strings_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/v7/client/ui/richtextarea/VRichTextToolbar_Images_default_InlineClientBundleGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.generated/com/vaadin/v7/client/ui/richtextarea/VRichTextToolbar_Strings_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/cssResource/com.vaadin.client.debug.internal.theme.DebugWindowStyles.css.cssmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/rpcPolicyManifest/manifest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/SoycDashboard-0-index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1-0-codeTypeBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1-0-overallBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1-0-packageBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_0_Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_allOther-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_boolean-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_char-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_class-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_double-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_float-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_gwtLang-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_int-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_jre-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_long-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_null-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_number-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_rpcGen-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_rpcGwt-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_rpcUser-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_string-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_undefined-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment1_widget-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2-0-codeTypeBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2-0-overallBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2-0-packageBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_0_Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_allOther-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_boolean-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_char-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_class-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_double-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_float-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_gwtLang-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_int-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_jre-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_long-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_null-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_number-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_rpcGen-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_rpcGwt-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_rpcUser-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_string-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_undefined-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/fragment2_widget-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/goog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/images/g_gwt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/images/play-g16-down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/images/play-g16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/images/up_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial-0-codeTypeBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial-0-overallBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial-0-packageBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_0_Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_allOther-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_boolean-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_char-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_class-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_double-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_float-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_gwtLang-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_int-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_jre-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_long-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_null-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_number-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_rpcGen-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_rpcGwt-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_rpcUser-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_string-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_undefined-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/initial_widget-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/inlay.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftoverStatus-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers-0-codeTypeBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers-0-overallBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers-0-packageBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_0_Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_allOther-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_boolean-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_char-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_class-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_double-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_float-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_gwtLang-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_int-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_jre-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_long-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_null-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_number-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_rpcGen-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_rpcGwt-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_rpcUser-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_string-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_undefined-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/leftovers_widget-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-initial-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-initial-0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-sp1-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-sp1-0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-sp2-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-sp2-0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-total-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/methodDependencies-total-0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/soyc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/splitStatus-0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total-0-codeTypeBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total-0-overallBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total-0-packageBreakdown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_0_Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_allOther-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_boolean-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_char-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_class-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_double-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_float-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_gwtLang-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_int-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_jre-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_long-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_null-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_number-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_rpcGen-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_rpcGwt-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_rpcUser-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_string-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_undefined-0Lits.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/compile-report/total_widget-0Classes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/dependencies0.xml.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/splitPoints0.xml.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/extra/com.cyberschnitzel.smartspark.DashboardWidgetSet/soycReport/stories0.xml.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/338AB0A2CBC7549BF6F2D0493E12B3A1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/396F806CD63ABD414BFBB9D57429F05B.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/885A87A7E7766ECC9E47804DF6012642.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/925CD9821791EA26CBB5DF27883F827D.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/9668843DD669E9FE0CE19A706807A347.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/9CC1FA2482B310CBEFC83B232FDAD06C.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/C55E667BC26B262A0AA1DE6F7D88FD42.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/DE709C1CAB0F65BCC5BEF11EDA73A925.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/DF7764EEC1903CD03C9545B354D8D8E4.cache.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/clear.cache.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com.vaadin.demo.dashboard.DashboardWidgetSet.devmode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com.vaadin.demo.dashboard.DashboardWidgetSet.nocache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_calendar/calendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_calendar/img/arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/arrow-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/arrow-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/barChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/hold.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/lineChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/move.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/popup_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/right_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scatterChart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-grip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-left-mobile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroll-right-mobile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scrollbar-area-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scrollbar-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroller.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/scroller_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeftBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipLeftTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRightBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipRightTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/tooltipTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/com_vaadin_addon_timeline/vertical-sprites.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/compilation-mappings.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/338AB0A2CBC7549BF6F2D0493E12B3A1/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/338AB0A2CBC7549BF6F2D0493E12B3A1/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/885A87A7E7766ECC9E47804DF6012642/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/885A87A7E7766ECC9E47804DF6012642/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/925CD9821791EA26CBB5DF27883F827D/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/925CD9821791EA26CBB5DF27883F827D/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9668843DD669E9FE0CE19A706807A347/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9668843DD669E9FE0CE19A706807A347/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9CC1FA2482B310CBEFC83B232FDAD06C/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/9CC1FA2482B310CBEFC83B232FDAD06C/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/C55E667BC26B262A0AA1DE6F7D88FD42/1.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/com.vaadin.demo.dashboard.DashboardWidgetSet/deferredjs/C55E667BC26B262A0AA1DE6F7D88FD42/2.cache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/widgetsets/WEB-INF/deploy/com.cyberschnitzel.smartspark.DashboardWidgetSet/rpcPolicyManifest/manifest.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_3_jre.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/favicon.ico" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/app-icon.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/app-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/draft-report-thumb.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/draft-report-thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/empty-poster.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/empty-poster.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/event-title-bg.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/event-title-bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/notes-bg.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/notes-bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-chart.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-chart.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-grid.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-grid.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-text.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/palette-text.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/poster-gloss.png" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/poster-gloss.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/profile-pic-300px.jpg" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/img/profile-pic-300px.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSPark.iml" afterPath="$PROJECT_DIR$/SmartSPark.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/DriverREST.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/DriverREST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/LoginREST.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/LoginREST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/ParkingSpotREST.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/ParkingSpotREST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/PeopleInZoneREST.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/PeopleInZoneREST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/CarPoolRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/CarPoolRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/NotificationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/NotificationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/Repository.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/Repository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/VacationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/jetbrains/Repository/VacationRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartspark-dashboard.iml" afterPath="$PROJECT_DIR$/smartspark-dashboard.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/addons.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/addons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/common.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/common.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/dashboard.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/dashboard.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/styles.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/dashboardview.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/dashboardview.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/login.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/login.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/reports.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/reports.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/sales.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/sales.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/schedule.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/schedule.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/transactions.scss" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/VAADIN/themes/dashboard/views/transactions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/movies-fallback.txt" afterPath="$PROJECT_DIR$/target/smartspark-dashboard-1.0.3-SNAPSHOT/movies-fallback.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,112 +461,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/LoginView.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardEventBus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEventBus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="e#1614#1615#0" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1708#1709#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
-                <element signature="e#1784#1785#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1842#1843#0" expanded="true" />
-                <element signature="e#1870#1871#0" expanded="true" />
-                <element signature="e#1901#1902#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
-                <element signature="e#1968#1969#0" expanded="true" />
-                <element signature="e#2000#2001#0" expanded="true" />
-                <element signature="e#2034#2035#0" expanded="true" />
-                <element signature="e#2064#2065#0" expanded="true" />
-                <element signature="e#2110#2111#0" expanded="true" />
-                <element signature="e#2148#2149#0" expanded="true" />
-                <element signature="e#2180#2181#0" expanded="true" />
-                <element signature="e#2208#2209#0" expanded="true" />
-                <element signature="e#2250#2251#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-                <element signature="e#2319#2320#0" expanded="true" />
-                <element signature="e#2350#2351#0" expanded="true" />
-                <element signature="e#2398#2399#0" expanded="true" />
-                <element signature="e#2438#2439#0" expanded="true" />
-                <element signature="e#2474#2475#0" expanded="true" />
-                <element signature="e#2506#2507#0" expanded="true" />
-                <element signature="e#2556#2557#0" expanded="true" />
-                <element signature="e#2598#2599#0" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-                <element signature="e#2668#2669#0" expanded="true" />
-                <element signature="e#2720#2721#0" expanded="true" />
-                <element signature="e#2766#2767#0" expanded="true" />
-                <element signature="e#2802#2803#0" expanded="true" />
-                <element signature="e#2835#2836#0" expanded="true" />
-                <element signature="e#2886#2887#0" expanded="true" />
-                <element signature="e#2930#2931#0" expanded="true" />
-                <element signature="e#2966#2967#0" expanded="true" />
-                <element signature="e#3001#3002#0" expanded="true" />
-                <element signature="e#3054#3055#0" expanded="true" />
-                <element signature="e#3102#3103#0" expanded="true" />
-                <element signature="e#3139#3140#0" expanded="true" />
-                <element signature="e#3172#3173#0" expanded="true" />
-                <element signature="e#3225#3226#0" expanded="true" />
-                <element signature="e#3269#3270#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/DashboardUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="41" column="80" lean-forward="false" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+            <state relative-caret-position="1170">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="DriverREST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cyberschnitzel/smartspark/domain/REST/DriverREST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginREST.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cyberschnitzel/smartspark/domain/REST/LoginREST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -236,11 +556,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/MapREST.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/LoginREST.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/DriverREST.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEventBus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/View/DashboardUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jetbrains/View/LoginView.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -265,7 +585,23 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="smartspark-dashboard" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="smartspark-dashboard" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -305,8 +641,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,7 +675,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
+              <item name="smartspark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
@@ -346,8 +683,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="smartspark" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
@@ -355,28 +692,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntelliPark-Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntelliPark-Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="smartspark" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="REST" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,18 +702,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntelliPark-Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jetbrains" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="smartspark" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
@@ -413,19 +720,32 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="VAADIN" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelliPark-Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelliPark-Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelliPark-Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -461,7 +781,7 @@
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.23" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="vaadin-sample:war exploded">
+        <artifact name="smartspark-dashboard:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -525,10 +845,10 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean compile install" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean compile" />
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="vaadin-sample:war exploded" />
+          <artifact name="smartspark-dashboard:war exploded" />
         </option>
       </method>
     </configuration>
@@ -657,45 +977,48 @@
       <updated>1510051423856</updated>
       <workItem from="1510051425469" duration="26812000" />
       <workItem from="1510171635950" duration="640000" />
+      <workItem from="1510233720564" duration="1265000" />
+      <workItem from="1510927698182" duration="1044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27452000" />
+    <option name="totallyTimeSpent" value="29761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31197098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31197098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -750,66 +1073,14 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/DriverThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="232" column="71" lean-forward="false" selection-start-line="232" selection-start-column="71" selection-end-line="232" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/NotificationThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Vacation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/ParkingBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Vacation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/ParkingBlock.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Notification.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/chatUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/MapThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Carpool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardEdit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/DashboardNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/MapThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Carpool.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardEdit.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/DashboardNotification.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/InlineTextEditor.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/ProfilePreferencesWindow.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/TopSixTheatersChart.java" />
@@ -819,265 +1090,64 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/TopGrossingMoviesChart.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/TransactionsListing.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Component/TopTenMoviesTable.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/ServerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardViewType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/ServerView.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardViewType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Components.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Components/ProfilePreferencesWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="210" column="49" lean-forward="false" selection-start-line="210" selection-start-column="49" selection-end-line="210" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardNavigator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Components/ProfilePreferencesWindow.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardNavigator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/MainView.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardView.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/PeopleInZoneREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/ParkingSpotREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/NotificationREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/MapREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/LoginREST.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/DriverREST.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-shared/8.1.6/vaadin-shared-8.1.6-sources.jar!/elemental/json/impl/JsonTokenizer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardMenu.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractOrderedLayout.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractSingleComponentContainer.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/VaadinServlet.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/VaadinService.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/SynchronizedRequestHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/communication/UIInitHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/UI.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractComponent.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/Page.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Employee.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEventBus.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/LoginView.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/DashboardUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cyberschnitzel/smartspark/tb/LoginViewIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1441">
-          <caret line="248" column="10" lean-forward="false" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/PeopleInZoneREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/ParkingSpotREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/NotificationREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/MapREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/LoginREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/REST/DriverREST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-shared/8.1.6/vaadin-shared-8.1.6-sources.jar!/elemental/json/impl/JsonTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="311" column="0" lean-forward="false" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/Dashboard/DashboardMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1684">
-          <caret line="213" column="58" lean-forward="false" selection-start-line="213" selection-start-column="58" selection-end-line="213" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractOrderedLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractSingleComponentContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/VaadinServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="383" column="0" lean-forward="false" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/VaadinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="1567" column="0" lean-forward="false" selection-start-line="1567" selection-start-column="0" selection-end-line="1567" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/SynchronizedRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/communication/UIInitHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="751" column="0" lean-forward="false" selection-start-line="751" selection-start-column="0" selection-end-line="751" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/ui/AbstractComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/8.1.6/vaadin-server-8.1.6-sources.jar!/com/vaadin/server/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="1379" column="0" lean-forward="false" selection-start-line="1379" selection-start-column="0" selection-end-line="1379" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Entities/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#1614#1615#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1784#1785#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1842#1843#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1901#1902#0" expanded="true" />
-            <element signature="e#1928#1929#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2000#2001#0" expanded="true" />
-            <element signature="e#2034#2035#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
-            <element signature="e#2110#2111#0" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2398#2399#0" expanded="true" />
-            <element signature="e#2438#2439#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2720#2721#0" expanded="true" />
-            <element signature="e#2766#2767#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2835#2836#0" expanded="true" />
-            <element signature="e#2886#2887#0" expanded="true" />
-            <element signature="e#2930#2931#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-            <element signature="e#3001#3002#0" expanded="true" />
-            <element signature="e#3054#3055#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-            <element signature="e#3139#3140#0" expanded="true" />
-            <element signature="e#3172#3173#0" expanded="true" />
-            <element signature="e#3225#3226#0" expanded="true" />
-            <element signature="e#3269#3270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEventBus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/Model/Events/DashboardEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jetbrains/View/DashboardUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="41" column="80" lean-forward="false" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+        <state relative-caret-position="60">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="1170">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyberschnitzel/smartspark/domain/REST/DriverREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyberschnitzel/smartspark/domain/REST/LoginREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1101,7 +1171,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>GWT</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1136,7 +1206,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SmartSPark</last-edited>
+          <last-edited>smartspark-dashboard</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

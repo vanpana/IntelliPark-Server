@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SmartSPark" />
+        <module name="smartspark-dashboard" />
         <module name="vaadin-sample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="SmartSPark" target="1.8" />
+      <module name="smartspark-dashboard" target="1.8" />
       <module name="vaadin-sample" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="smartspark-dashboard:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="smartspark-dashboard-1.0.3-SNAPSHOT.war">
+      <element id="artifact" artifact-name="smartspark-dashboard:war exploded" />
+    </root>
+  </artifact>
+</component>
